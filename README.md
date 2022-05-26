@@ -14,7 +14,7 @@ and the Flutter guide for
 
 # Modern Themes
 
-Github: https://github.com/Jules-Media/Modern_Themes
+Github: https://github.com/Jules-Media/Modern_Themes \
 Pub.dev: https://pub.dev/packages/modern_themes
 
 ## Additional information
