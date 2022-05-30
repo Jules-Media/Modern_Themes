@@ -1,9 +1,64 @@
 library modern_themes;
 
-import 'package:flutter/material.dart' show ThemeData;
+import 'package:flutter/material.dart';
 
 class Themes {
-  static ThemeData defaultLightTheme = ThemeData();
+  static ThemeData defaultLightTheme = ThemeData(
+    // General Values
+    useMaterial3: true,
+    brightness: Brightness.light,
+    materialTapTargetSize: MaterialTapTargetSize.padded,
+
+    // Colors
+
+    /* Button Themes */
+    buttonTheme: const ButtonThemeData(
+      materialTapTargetSize: MaterialTapTargetSize.padded,
+    ),
+
+    // Text Button Theme
+    textButtonTheme: TextButtonThemeData(
+      style: ButtonStyle(
+        alignment: Alignment.center,
+        enableFeedback: true,
+        side: MaterialStateProperty.all<BorderSide>(
+          const BorderSide(
+            color: Colors.blue,
+            style: BorderStyle.solid,
+            width: 1.0,
+          ),
+        ),
+        tapTargetSize: MaterialTapTargetSize.padded,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+    ),
+
+    // Toogle Buttons Theme
+    toggleButtonsTheme: const ToggleButtonsThemeData(),
+
+    // Elevated Button Theme
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ButtonStyle(
+        alignment: Alignment.center,
+        enableFeedback: true,
+        shape: MaterialStateProperty.all<OutlinedBorder>(
+          const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(20.0)),
+            side: BorderSide(
+              style: BorderStyle.solid,
+              width: 1.0,
+            ),
+          ),
+        ),
+        side: MaterialStateProperty.all<BorderSide>(
+          const BorderSide(
+            style: BorderStyle.solid,
+            width: 1.0,
+          ),
+        ),
+      ),
+    ),
+  );
 
   static ThemeData defaultDarkTheme = ThemeData();
 

@@ -17,6 +17,13 @@ and the Flutter guide for
 Github: https://github.com/Jules-Media/Modern_Themes \
 Pub.dev: https://pub.dev/packages/modern_themes
 
+# About
+
+With this Plugin you can implement and use Themes very easy.
+This Plugin comes with a few modern and beautiful Themes you can use
+without much effort.
+
+
 ## Additional information
 
 © Julian Schumacher 2022
