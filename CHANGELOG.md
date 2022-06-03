@@ -9,3 +9,8 @@
 ## 0.0.3
 
 * Add Default Themes
+
+
+## 0.0.4
+
+* Add a few things for the light Theme

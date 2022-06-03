@@ -2,6 +2,7 @@ library modern_themes;
 
 import 'package:flutter/cupertino.dart' show NoDefaultCupertinoThemeData;
 import 'package:flutter/material.dart';
+import 'package:modern_themes/src/values/border_values.dart';
 import 'package:modern_themes/src/values/coloring.dart' show Coloring;
 import 'package:modern_themes/src/values/number_values.dart';
 
@@ -19,14 +20,6 @@ class Themes {
 
   // High Contrast Dark Theme the user can set
   static ThemeData? _highContrastDarkTheme;
-
-  /* Border Sides */
-  /// Border Side that is used for the Buttons in the Light Theme
-  static const BorderSide _lightButtonBorderSide = BorderSide(
-    color: Coloring.lightBorderSideColor,
-    style: BorderStyle.solid,
-    width: NumberValues.lightBorderSideWidth,
-  );
 
   /// The Default Light Theme. The Most used Theme.
   /// If you wan't a cool Theme, that is different from the
@@ -53,7 +46,8 @@ class Themes {
         style: ButtonStyle(
           alignment: Alignment.center,
           enableFeedback: true,
-          side: MaterialStateProperty.all<BorderSide>(_lightButtonBorderSide),
+          side: MaterialStateProperty.all<BorderSide>(
+              BorderValues.lightBorderSide),
           tapTargetSize: MaterialTapTargetSize.padded,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
@@ -70,10 +64,11 @@ class Themes {
           shape: MaterialStateProperty.all<OutlinedBorder>(
             const RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(20.0)),
-              side: _lightButtonBorderSide,
+              side: BorderValues.lightBorderSide,
             ),
           ),
-          side: MaterialStateProperty.all<BorderSide>(_lightButtonBorderSide),
+          side: MaterialStateProperty.all<BorderSide>(
+              BorderValues.lightBorderSide),
         ),
       ),
 
@@ -85,11 +80,11 @@ class Themes {
       /// Floating Action Button Theme
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
         enableFeedback: true,
-        shape: CircleBorder(side: _lightButtonBorderSide),
+        shape: CircleBorder(side: BorderValues.lightBorderSide),
       ),
 
       // Input Decoration Theme
-      inputDecorationTheme: const InputDecorationTheme(
+      inputDecorationTheme: InputDecorationTheme(
         alignLabelWithHint: true,
         filled: false,
         floatingLabelAlignment: FloatingLabelAlignment.center,
@@ -97,12 +92,36 @@ class Themes {
         helperMaxLines: 2,
         isCollapsed: false,
         isDense: false,
+        border: const OutlineInputBorder(
+          borderRadius: BorderValues.inputBorderRadius,
+          borderSide: BorderValues.lightBorderSide,
+        ),
+        enabledBorder: const OutlineInputBorder(
+          borderRadius: BorderValues.inputBorderRadius,
+          borderSide: BorderValues.lightBorderSide,
+        ),
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderValues.inputBorderRadius,
+          borderSide: BorderValues.lightErrorBorderSide,
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderValues.inputBorderRadius,
+          borderSide: BorderValues.lightFocusedBorderSide,
+        ),
+        focusedErrorBorder: OutlineInputBorder(
+          borderRadius: BorderValues.inputBorderRadius,
+          borderSide: BorderValues.lightErrorBorderSide,
+        ),
+        disabledBorder: OutlineInputBorder(
+          borderRadius: BorderValues.inputBorderRadius,
+          borderSide: BorderValues.lightDisabledBorderSide,
+        ),
       ),
 
       // Divider Theme
-      dividerTheme: DividerThemeData(
+      dividerTheme: const DividerThemeData(
         color: Coloring.lightDividerColor,
-        thickness: 1.0,
+        thickness: NumberValues.dividerThickness,
       ),
     );
   }
