@@ -2,9 +2,10 @@ library modern_themes;
 
 import 'package:flutter/cupertino.dart' show NoDefaultCupertinoThemeData;
 import 'package:flutter/material.dart';
-import 'package:modern_themes/src/values/border_values.dart';
-import 'package:modern_themes/src/values/coloring.dart' show Coloring;
-import 'package:modern_themes/src/values/number_values.dart';
+import 'components/border_values.dart';
+import 'components/coloring.dart';
+import 'components/number_values.dart';
+import 'components/text_values.dart';
 
 /// Contains all Themes of the modern_themes Package.
 /// Contains the default Themes and setter for individual Themes.
@@ -35,10 +36,21 @@ class Themes {
       visualDensity: VisualDensity.adaptivePlatformDensity,
 
       // Colors
+      primaryColor: Coloring.mainColor,
+      colorScheme: Coloring.lightColorScheme,
+      colorSchemeSeed: Coloring.mainColor,
+      focusColor: Coloring.lightFocusedBorderSideColor,
+      dividerColor: Coloring.lightDividerColor,
+      disabledColor: Coloring.disabledColor,
+      scaffoldBackgroundColor: Coloring.lightBackgroundColor,
+      errorColor: Coloring.lightErrorColor,
 
       /* Button Themes */
-      buttonTheme: const ButtonThemeData(
+      buttonTheme: ButtonThemeData(
         materialTapTargetSize: MaterialTapTargetSize.padded,
+        alignedDropdown: false,
+        buttonColor: Coloring.mainColor,
+        disabledColor: Coloring.disabledColor,
       ),
 
       // Text Button Theme
@@ -47,7 +59,8 @@ class Themes {
           alignment: Alignment.center,
           enableFeedback: true,
           side: MaterialStateProperty.all<BorderSide>(
-              BorderValues.lightBorderSide),
+            BorderValues.lightBorderSide,
+          ),
           tapTargetSize: MaterialTapTargetSize.padded,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
@@ -68,7 +81,8 @@ class Themes {
             ),
           ),
           side: MaterialStateProperty.all<BorderSide>(
-              BorderValues.lightBorderSide),
+            BorderValues.lightBorderSide,
+          ),
         ),
       ),
 
@@ -116,6 +130,9 @@ class Themes {
           borderRadius: BorderValues.inputBorderRadius,
           borderSide: BorderValues.lightDisabledBorderSide,
         ),
+        errorMaxLines: 10,
+        errorStyle: TextValues.errorStyle,
+        fillColor: Coloring.fillColor,
       ),
 
       // Divider Theme

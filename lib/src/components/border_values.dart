@@ -38,7 +38,7 @@ class BorderValues {
 
   /// Border Side for disabled Elements. Used in light Themes.
   static final BorderSide lightDisabledBorderSide = BorderSide(
-    color: Coloring.diabledColor,
+    color: Coloring.disabledColor,
     style: BorderStyle.solid,
     width: NumberValues.lightBorderSideWidth,
   );
