@@ -18,3 +18,7 @@
 ## 0.1.0
 
 * First Version of Light Theme's done
+
+## 0.1.1
+
+* Bugfix

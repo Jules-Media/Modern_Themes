@@ -44,7 +44,6 @@ class Themes {
       // Colors
       primaryColor: Coloring.mainColor,
       colorScheme: Coloring.lightColorScheme,
-      colorSchemeSeed: Coloring.mainColor,
       focusColor: Coloring.lightFocusedBorderSideColor,
       dividerColor: Coloring.lightDividerColor,
       disabledColor: Coloring.disabledColor,
