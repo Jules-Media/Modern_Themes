@@ -12,7 +12,7 @@ class Coloring {
   static Color mainColor = Colors.blue;
 
   /// The secondary Color of the App.
-  static Color secondayColor = Colors.white;
+  static Color secondaryColor = Colors.white;
 
   /// Color for diabled Elements.
   static final Color disabledColor = Colors.grey.shade400;
@@ -29,14 +29,14 @@ class Coloring {
     brightness: Brightness.light,
     primary: mainColor,
     onPrimary: lightTextColor,
-    secondary: secondayColor,
+    secondary: secondaryColor,
     onSecondary: lightTextColor,
     error: lightErrorColor,
     onError: lightTextColor,
     background: lightBackgroundColor,
     onBackground: lightTextColor,
     surface: mainColor,
-    onSurface: secondayColor,
+    onSurface: secondaryColor,
   );
 
   /// Color for the Divider used in Light Themes

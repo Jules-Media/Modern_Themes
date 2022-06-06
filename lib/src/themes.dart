@@ -2,6 +2,8 @@ library modern_themes;
 
 import 'package:flutter/cupertino.dart' show NoDefaultCupertinoThemeData;
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' show SystemUiOverlayStyle;
+import 'package:helpful_extensions/helpful_extensions.dart' show ColorMapping;
 import 'components/border_values.dart';
 import 'components/coloring.dart';
 import 'components/number_values.dart';
@@ -32,7 +34,11 @@ class Themes {
       useMaterial3: true,
       brightness: Brightness.light,
       materialTapTargetSize: MaterialTapTargetSize.padded,
-      cupertinoOverrideTheme: const NoDefaultCupertinoThemeData(),
+      cupertinoOverrideTheme: NoDefaultCupertinoThemeData(
+        brightness: Brightness.light,
+        scaffoldBackgroundColor: Colors.white,
+        primaryColor: Coloring.mainColor,
+      ),
       visualDensity: VisualDensity.adaptivePlatformDensity,
 
       // Colors
@@ -44,6 +50,13 @@ class Themes {
       disabledColor: Coloring.disabledColor,
       scaffoldBackgroundColor: Coloring.lightBackgroundColor,
       errorColor: Coloring.lightErrorColor,
+      shadowColor: Colors.black87,
+      primaryColorDark: Coloring.mainColor,
+      primaryColorLight: Coloring.mainColor,
+      backgroundColor: Colors.white,
+      dialogBackgroundColor: Colors.white,
+      bottomAppBarColor: Coloring.mainColor,
+      indicatorColor: Coloring.mainColor,
 
       /* Button Themes */
       buttonTheme: ButtonThemeData(
@@ -103,6 +116,7 @@ class Themes {
         filled: false,
         floatingLabelAlignment: FloatingLabelAlignment.center,
         floatingLabelBehavior: FloatingLabelBehavior.auto,
+        labelStyle: TextValues.lightInputLabelStyle,
         helperMaxLines: 2,
         isCollapsed: false,
         isDense: false,
@@ -139,6 +153,244 @@ class Themes {
       dividerTheme: const DividerThemeData(
         color: Coloring.lightDividerColor,
         thickness: NumberValues.dividerThickness,
+      ),
+
+      /* AppBar Theme */
+      appBarTheme: AppBarTheme(
+        centerTitle: true,
+        elevation: 5.0,
+        systemOverlayStyle: SystemUiOverlayStyle(
+          statusBarBrightness:
+              Coloring.mainColor.isLight() ? Brightness.dark : Brightness.light,
+          statusBarColor: Coloring.mainColor,
+          statusBarIconBrightness:
+              Coloring.mainColor.isLight() ? Brightness.dark : Brightness.light,
+          systemNavigationBarColor: Colors.transparent,
+          systemNavigationBarIconBrightness:
+              Coloring.mainColor.isLight() ? Brightness.dark : Brightness.light,
+          systemNavigationBarDividerColor: Colors.red,
+        ),
+        backgroundColor: Coloring.mainColor,
+        iconTheme: IconThemeData(
+          color: Coloring.secondaryColor,
+          opacity: 1.0,
+        ),
+        actionsIconTheme: IconThemeData(
+          opacity: 1.0,
+          color: Coloring.secondaryColor,
+        ),
+        shadowColor: Colors.black87,
+        foregroundColor: Coloring.secondaryColor,
+        shape: RoundedRectangleBorder(
+          borderRadius: const BorderRadius.only(
+            bottomLeft: Radius.circular(33),
+            bottomRight: Radius.circular(33),
+          ),
+          side: BorderSide(
+            color: Coloring.mainColor.withAlpha(50),
+            style: BorderStyle.solid,
+            width: 1.0,
+          ),
+        ),
+      ),
+
+      /* Radio Theme */
+      radioTheme: RadioThemeData(
+        fillColor: MaterialStateProperty.all<Color>(Coloring.mainColor),
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+        materialTapTargetSize: MaterialTapTargetSize.padded,
+      ),
+
+      /* List Tile Theme */
+      listTileTheme: ListTileThemeData(
+        enableFeedback: true,
+        style: ListTileStyle.list,
+        dense: false,
+        iconColor: Colors.black,
+        textColor: Colors.black,
+        tileColor: Colors.white,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(50),
+          ),
+          side: BorderSide(
+            color: Colors.white,
+            style: BorderStyle.solid,
+            width: 0.5,
+          ),
+        ),
+        selectedColor: Colors.black,
+        selectedTileColor: Coloring.mainColor.withAlpha(70),
+        minLeadingWidth: 10,
+        minVerticalPadding: 10,
+      ),
+
+      /* Icon Themes */
+      iconTheme: const IconThemeData(
+        color: Colors.black,
+        opacity: 1.0,
+      ),
+      primaryIconTheme: const IconThemeData(
+        color: Colors.black,
+        opacity: 1.0,
+      ),
+
+      /* Checkbox Theme */
+      checkboxTheme: CheckboxThemeData(
+        checkColor: MaterialStateProperty.all<Color>(Colors.white),
+        fillColor: MaterialStateProperty.all<Color>(Coloring.mainColor),
+        materialTapTargetSize: MaterialTapTargetSize.padded,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(30),
+          ),
+        ),
+        side: BorderSide(
+          color: Coloring.mainColor,
+          style: BorderStyle.solid,
+          width: 0.7,
+        ),
+      ),
+
+      /* Switch Theme Data */
+      switchTheme: const SwitchThemeData(
+        materialTapTargetSize: MaterialTapTargetSize.padded,
+      ),
+
+      /* Bottom Sheet Theme */
+      bottomSheetTheme: BottomSheetThemeData(
+        modalBackgroundColor: Colors.white,
+        modalElevation: 10.0,
+        backgroundColor: Colors.white,
+        clipBehavior: Clip.antiAliasWithSaveLayer,
+        elevation: 10.0,
+        shape: RoundedRectangleBorder(
+          borderRadius: const BorderRadius.all(
+            Radius.circular(30),
+          ),
+          side: BorderSide(
+            color: Coloring.mainColor,
+            style: BorderStyle.solid,
+            width: 0.2,
+          ),
+        ),
+      ),
+
+      /* Dialog Theme */
+      dialogTheme: const DialogTheme(
+        alignment: Alignment.center,
+        backgroundColor: Colors.white,
+        elevation: 20.0,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(20),
+          ),
+        ),
+      ),
+
+      /* Text Theme */
+      textTheme: const TextTheme(
+        bodyLarge: TextStyle(
+          color: Colors.black,
+          overflow: TextOverflow.fade,
+          textBaseline: TextBaseline.alphabetic,
+        ),
+        bodyMedium: TextStyle(
+          color: Colors.black,
+          overflow: TextOverflow.fade,
+          textBaseline: TextBaseline.alphabetic,
+        ),
+        bodySmall: TextStyle(
+          color: Colors.black,
+          overflow: TextOverflow.fade,
+          textBaseline: TextBaseline.alphabetic,
+        ),
+        displayLarge: TextStyle(
+          color: Colors.black,
+          overflow: TextOverflow.fade,
+          textBaseline: TextBaseline.alphabetic,
+        ),
+        displayMedium: TextStyle(
+          color: Colors.black,
+          overflow: TextOverflow.fade,
+          textBaseline: TextBaseline.alphabetic,
+        ),
+        displaySmall: TextStyle(
+          color: Colors.black,
+          overflow: TextOverflow.fade,
+          textBaseline: TextBaseline.alphabetic,
+        ),
+        headlineLarge: TextStyle(
+          color: Colors.black,
+          overflow: TextOverflow.fade,
+          textBaseline: TextBaseline.alphabetic,
+        ),
+        headlineMedium: TextStyle(
+          color: Colors.black,
+          overflow: TextOverflow.fade,
+          textBaseline: TextBaseline.alphabetic,
+        ),
+        headlineSmall: TextStyle(
+          color: Colors.black,
+          overflow: TextOverflow.fade,
+          textBaseline: TextBaseline.alphabetic,
+        ),
+        labelLarge: TextStyle(
+          color: Colors.black,
+          overflow: TextOverflow.fade,
+          textBaseline: TextBaseline.alphabetic,
+        ),
+        labelMedium: TextStyle(
+          color: Colors.black,
+          overflow: TextOverflow.fade,
+          textBaseline: TextBaseline.alphabetic,
+        ),
+        labelSmall: TextStyle(
+          color: Colors.black,
+          overflow: TextOverflow.fade,
+          textBaseline: TextBaseline.alphabetic,
+        ),
+        titleLarge: TextStyle(
+          color: Colors.black,
+          overflow: TextOverflow.fade,
+          textBaseline: TextBaseline.alphabetic,
+        ),
+        titleMedium: TextStyle(
+          color: Colors.black,
+          overflow: TextOverflow.fade,
+          textBaseline: TextBaseline.alphabetic,
+        ),
+        titleSmall: TextStyle(
+          color: Colors.black,
+          overflow: TextOverflow.fade,
+          textBaseline: TextBaseline.alphabetic,
+        ),
+      ),
+
+      /* Progress Indicator Theme */
+      progressIndicatorTheme: ProgressIndicatorThemeData(
+        circularTrackColor: Colors.white,
+        color: Coloring.mainColor,
+        refreshBackgroundColor: Colors.white,
+      ),
+
+      /* Drawer Theme */
+      drawerTheme: const DrawerThemeData(
+        backgroundColor: Colors.white70,
+        elevation: 7.0,
+      ),
+
+      /* Typography */
+      // Does not work at the Moment.
+      // MaterialApp is running into a Problem when using this
+      // typography: Typography.material2018(),
+
+      /* Scrollbar Theme */
+      scrollbarTheme: ScrollbarThemeData(
+        trackVisibility: MaterialStateProperty.all<bool>(true),
+        interactive: true,
+        thumbVisibility: MaterialStateProperty.all<bool>(false),
       ),
     );
   }

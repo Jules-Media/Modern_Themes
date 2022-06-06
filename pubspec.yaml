@@ -1,15 +1,18 @@
 name: modern_themes
 description: A Package to implement, change and use Themes
-version: 0.0.4
+version: 0.1.0
 repository: https://github.com/Jules-sh/Modern_Themes
 
 environment:
-  sdk: ">=2.17.0 <3.0.0"
-  flutter: ">=3.0.0"
+  sdk: ">=2.17.1 <3.0.0"
+  flutter: ">=3.0.1"
 
 dependencies:
   flutter:
     sdk: flutter
+
+  # Own Packages
+  helpful_extensions: ^0.0.3
 
 dev_dependencies:
   flutter_test:
