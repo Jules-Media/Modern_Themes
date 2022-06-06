@@ -116,6 +116,7 @@ class Themes {
         floatingLabelAlignment: FloatingLabelAlignment.center,
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         labelStyle: TextValues.lightInputLabelStyle,
+        floatingLabelStyle: TextValues.lightInputFloatingLabelStyle,
         helperMaxLines: 2,
         isCollapsed: false,
         isDense: false,

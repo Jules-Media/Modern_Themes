@@ -22,3 +22,7 @@
 ## 0.1.1
 
 * Bugfix
+
+## 0.1.2
+
+* Color Adjustment

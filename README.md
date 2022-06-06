@@ -29,4 +29,5 @@ Just use this Themes in your Material or Cupertino App.
 
 ## Additional information
 
-© Julian Schumacher 2022
+© Julian Schumacher 2022 \
+Published under the Jules Media Organisation
