@@ -7,4 +7,3 @@ export 'src/components/border_values.dart';
 export 'src/components/coloring.dart';
 export 'src/components/number_values.dart';
 export 'src/components/text_values.dart';
-export 'src/themes.dart';
