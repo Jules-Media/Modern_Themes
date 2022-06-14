@@ -22,6 +22,9 @@ class Coloring {
   /// Text Color for the light Theme
   static const Color lightTextColor = Colors.black;
 
+  /// The Background Color for Scaffold and other
+  /// Material Components used in this App.
+  /// Used in light Themes.
   static const Color lightBackgroundColor = Colors.white;
 
   /// Color Scheme for the light Theme
@@ -54,4 +57,7 @@ class Coloring {
 
   /// The Color with which filled Elements will be filled.
   static const Color fillColor = Colors.transparent;
+
+  /// Color used for shadows in the light Themes.
+  static final Color lightShadowColor = Colors.grey.shade900;
 }
