@@ -1,13 +1,14 @@
 library modern_themes;
 
-import 'package:flutter/cupertino.dart' show NoDefaultCupertinoThemeData;
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show SystemUiOverlayStyle;
-import 'package:helpful_extensions/helpful_extensions.dart' show ColorMapping;
 import 'components/border_values.dart';
+import 'components/brightness_values.dart';
 import 'components/coloring.dart';
 import 'components/number_values.dart';
 import 'components/text_values.dart';
+
+import 'package:flutter/cupertino.dart' show NoDefaultCupertinoThemeData;
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' show SystemUiOverlayStyle;
 
 /// Contains all Themes of the modern_themes Package.
 /// Contains the default Themes and setter for individual Themes.
@@ -167,17 +168,12 @@ class Themes {
           centerTitle: true,
           elevation: 5.0,
           systemOverlayStyle: SystemUiOverlayStyle(
-            statusBarBrightness: Coloring.mainColor.isLight()
-                ? Brightness.dark
-                : Brightness.light,
+            statusBarBrightness: BrightnessValues.statusBarBrightness,
             statusBarColor: Coloring.mainColor,
-            statusBarIconBrightness: Coloring.mainColor.isLight()
-                ? Brightness.dark
-                : Brightness.light,
+            statusBarIconBrightness: BrightnessValues.statusBarBrightness,
             systemNavigationBarColor: Colors.transparent,
-            systemNavigationBarIconBrightness: Coloring.mainColor.isLight()
-                ? Brightness.dark
-                : Brightness.light,
+            systemNavigationBarIconBrightness:
+                BrightnessValues.statusBarBrightness,
             systemNavigationBarDividerColor: Colors.red,
           ),
           backgroundColor: Coloring.mainColor,

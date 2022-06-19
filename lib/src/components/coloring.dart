@@ -2,6 +2,7 @@ library modern_themes;
 
 import 'package:flutter/material.dart'
     show Color, Colors, ColorScheme, Brightness;
+import 'package:helpful_extensions/helpful_extensions.dart' show ColorMapping;
 
 /// Class that contains everything that
 /// is related to Colors.
@@ -9,10 +10,24 @@ import 'package:flutter/material.dart'
 class Coloring {
   /* General Values */
   /// The Main Color of the App
-  static Color mainColor = Colors.blue;
+  static Color _mainColor = Colors.blue;
+
+  static set mainColor(Color color) {
+    _mainColor = color;
+
+    if (color.isDark()) {
+      _secondaryColor = Colors.white;
+    } else {
+      _secondaryColor = Colors.black;
+    }
+  }
+
+  static Color get mainColor => _mainColor;
+
+  static Color _secondaryColor = Colors.white;
 
   /// The secondary Color of the App.
-  static Color secondaryColor = Colors.white;
+  static Color get secondaryColor => _secondaryColor;
 
   /// Color for diabled Elements.
   static final Color disabledColor = Colors.grey.shade400;
@@ -30,16 +45,16 @@ class Coloring {
   /// Color Scheme for the light Theme
   static final ColorScheme lightColorScheme = ColorScheme(
     brightness: Brightness.light,
-    primary: mainColor,
+    primary: _mainColor,
     onPrimary: lightTextColor,
-    secondary: secondaryColor,
+    secondary: _secondaryColor,
     onSecondary: lightTextColor,
     error: lightErrorColor,
     onError: lightTextColor,
     background: lightBackgroundColor,
     onBackground: lightTextColor,
-    surface: mainColor,
-    onSurface: secondaryColor,
+    surface: _mainColor,
+    onSurface: _secondaryColor,
   );
 
   /// Color for the Divider used in Light Themes
