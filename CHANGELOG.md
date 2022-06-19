@@ -26,3 +26,7 @@
 ## 0.1.2
 
 * Color Adjustment
+
+## 0.1.3
+
+* Few fixes and adjustments
