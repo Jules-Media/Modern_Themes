@@ -1,3 +1,8 @@
+## 0.2.0
+
+* add ThemeMode Variable
+
+
 ## 0.1.3
 
 * Few fixes and adjustments
