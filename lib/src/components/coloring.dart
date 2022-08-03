@@ -12,7 +12,10 @@ class Coloring {
   /// The Main Color of the App
   static Color _mainColor = Colors.blue;
 
-  static set mainColor(Color color) {
+  /// Changes the Main Color
+  /// and with it the Secondary Color depending
+  /// on the State (light Or Dark) of the [color]
+  static void changeColor(Color color) {
     _mainColor = color;
 
     if (color.isDark()) {
@@ -22,8 +25,12 @@ class Coloring {
     }
   }
 
+  /// Getter for the main Color.
   static Color get mainColor => _mainColor;
 
+  /// Secondary Color.
+  /// Is used in Texts and sometimes Shapes.
+  /// Depends on the Main Color.
   static Color _secondaryColor = Colors.white;
 
   /// The secondary Color of the App.

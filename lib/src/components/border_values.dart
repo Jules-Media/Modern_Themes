@@ -11,7 +11,7 @@ class BorderValues {
   /// Border Radius for the Input Theme.
   /// Is used in every Theme.
   static const BorderRadius inputBorderRadius = BorderRadius.all(
-    Radius.circular(20),
+    Radius.circular(30),
   );
 
   /* Border Sides */

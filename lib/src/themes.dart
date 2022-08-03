@@ -68,6 +68,11 @@ class Themes {
         dialogBackgroundColor: Colors.white,
         bottomAppBarColor: Coloring.mainColor,
         indicatorColor: Coloring.mainColor,
+        hintColor: Colors.grey.shade400,
+        cardColor: Coloring.mainColor,
+        hoverColor: Coloring.mainColor,
+        splashColor: Coloring.mainColor,
+        canvasColor: Coloring.mainColor,
 
         /* Button Themes */
         buttonTheme: ButtonThemeData(
@@ -78,6 +83,7 @@ class Themes {
           colorScheme: Coloring.lightColorScheme,
           layoutBehavior: ButtonBarLayoutBehavior.padded,
           textTheme: ButtonTextTheme.normal,
+          focusColor: Coloring.mainColor,
         ),
 
         // Text Button Theme
@@ -124,11 +130,24 @@ class Themes {
         ),
 
         /// Floating Action Button Theme
-        floatingActionButtonTheme: const FloatingActionButtonThemeData(
+        floatingActionButtonTheme: FloatingActionButtonThemeData(
+          backgroundColor: Colors.blue.shade800,
+          elevation: 15,
+          disabledElevation: 5,
           enableFeedback: true,
-          shape: CircleBorder(side: BorderValues.lightBorderSide),
+          focusColor: Colors.blue.shade700,
+          focusElevation: 17,
+          foregroundColor: Colors.white,
+          hoverElevation: 17,
+          shape: RoundedRectangleBorder(
+            borderRadius: const BorderRadius.all(Radius.circular(30)),
+            side: BorderSide(
+              color: Colors.blue.shade900,
+              style: BorderStyle.solid,
+              width: 0.25,
+            ),
+          ),
         ),
-
         // Input Decoration Theme
         inputDecorationTheme: InputDecorationTheme(
           alignLabelWithHint: true,
@@ -175,7 +194,7 @@ class Themes {
           thickness: NumberValues.dividerThickness,
         ),
 
-        /* AppBar Theme */
+        /* AppBar Themes */
         appBarTheme: AppBarTheme(
           centerTitle: true,
           elevation: 5.0,
@@ -209,6 +228,32 @@ class Themes {
               style: BorderStyle.solid,
               width: 1.0,
             ),
+          ),
+        ),
+
+        // Bottom AppBar Themee
+        bottomAppBarTheme: const BottomAppBarTheme(),
+
+        // Bottom Navigation Bar Theme
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          elevation: 10.0,
+          enableFeedback: true,
+          landscapeLayout: BottomNavigationBarLandscapeLayout.linear,
+          selectedIconTheme: const IconThemeData(
+            color: Colors.white,
+            opacity: 1.0,
+          ),
+          unselectedIconTheme: const IconThemeData(
+            color: Colors.white,
+            opacity: 1.0,
+          ),
+          selectedItemColor: Colors.white,
+          unselectedItemColor: Colors.white,
+          showSelectedLabels: true,
+          showUnselectedLabels: false,
+          type: BottomNavigationBarType.shifting,
+          mouseCursor: MaterialStateProperty.resolveWith(
+            ((states) => _lightBottomNavigationBarMouseCursor(states)),
           ),
         ),
 
@@ -296,13 +341,18 @@ class Themes {
         ),
 
         /* Dialog Theme */
-        dialogTheme: const DialogTheme(
+        dialogTheme: DialogTheme(
           alignment: Alignment.center,
           backgroundColor: Colors.white,
-          elevation: 20.0,
+          elevation: 25.0,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(
+            borderRadius: const BorderRadius.all(
               Radius.circular(20),
+            ),
+            side: BorderSide(
+              color: Coloring.mainColor,
+              style: BorderStyle.solid,
+              width: 0.1,
             ),
           ),
         ),
@@ -331,6 +381,7 @@ class Themes {
           trackVisibility: MaterialStateProperty.all<bool>(true),
           interactive: true,
           thumbVisibility: MaterialStateProperty.all<bool>(false),
+          radius: const Radius.circular(20),
         ),
       );
 
@@ -418,4 +469,19 @@ class Themes {
   /// You can get it with [themeMode].
   /// Sets the internal varaible [_themeMode]
   static set themeMode(ThemeMode mode) => _themeMode = mode;
+
+  /// Returns the Mouse Curser for the Bottom Navigation Bar
+  /// in the light Mode, depending on the Material State
+  static MouseCursor _lightBottomNavigationBarMouseCursor(
+      Set<MaterialState> states) {
+    const localStates = <MaterialState>{
+      MaterialState.focused,
+      MaterialState.hovered,
+      MaterialState.pressed,
+    };
+    if (states.any(localStates.contains)) {
+      return SystemMouseCursors.click;
+    }
+    return SystemMouseCursors.basic;
+  }
 }
