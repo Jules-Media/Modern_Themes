@@ -25,6 +25,18 @@ class Themes {
   /// Settings.
   static ThemeMode? _themeMode;
 
+  /// Getter for the ThemeMode. iF the ThemeMode is not set,
+  /// [ThemeMode.system] is reaturned as a defualt Value.
+  /// Otherwise, the theme Mode the User set with the corresponding
+  /// themeMode getter, is returned.
+  static ThemeMode get themeMode => _themeMode ?? ThemeMode.system;
+
+  /// Changes the ThemeMode Variable to the new
+  /// Theme.
+  static void changeTheme(ThemeMode theme) {
+    _themeMode = theme;
+  }
+
   /// Light Theme the user can set
   static ThemeData? _lightTheme;
 
@@ -800,17 +812,6 @@ class Themes {
   /// de [defaultHighContrastDarkTheme] will be returned
   static ThemeData get highContrastDarkTheme =>
       _highContrastDarkTheme ?? defaultHighContrastDarkTheme;
-
-  /// Getter for the ThemeMode. iF the ThemeMode is not set,
-  /// [ThemeMode.system] is reaturned as a defualt Value.
-  /// Otherwise, the theme Mode the User set with the corresponding
-  /// themeMode getter, is returned.
-  static ThemeMode get themeMode => _themeMode ?? ThemeMode.system;
-
-  /// Set the theme Mode of the Modern Themes Package.
-  /// You can get it with [themeMode].
-  /// Sets the internal varaible [_themeMode]
-  static set themeMode(ThemeMode mode) => _themeMode = mode;
 
   /// Returns the Mouse Curser for the Bottom Navigation Bar
   /// in the light Mode, depending on the Material State
