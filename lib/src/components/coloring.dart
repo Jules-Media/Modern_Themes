@@ -39,6 +39,12 @@ class Coloring {
   /// Color for diabled Elements.
   static final Color disabledColor = Colors.grey.shade400;
 
+  /// The Colors used for everything that is an Error.
+  static final Color errorColor = Colors.red.shade800;
+
+  /// Color for the Divider used in all Themes.
+  static const Color dividerColor = Colors.grey;
+
   /* Light Values */
 
   /// Text Color for the light Theme
@@ -56,7 +62,7 @@ class Coloring {
     onPrimary: lightTextColor,
     secondary: _secondaryColor,
     onSecondary: lightTextColor,
-    error: lightErrorColor,
+    error: errorColor,
     onError: lightTextColor,
     background: lightBackgroundColor,
     onBackground: lightTextColor,
@@ -64,22 +70,44 @@ class Coloring {
     onSurface: _secondaryColor,
   );
 
-  /// Color for the Divider used in Light Themes
-  static const Color lightDividerColor = Colors.grey;
-
   /// The Color used for Border Sides in the Light Themes.
   static const Color lightBorderSideColor = Colors.cyan;
 
   /// Color used for focused Objects. Used in light Themes
   static final Color lightFocusedBorderSideColor = Colors.purple.shade400;
 
-  /// The Colors used for everything that is an Error.
-  /// Used in light Themes.
-  static final Color lightErrorColor = Colors.red.shade800;
-
   /// The Color with which filled Elements will be filled.
   static const Color fillColor = Colors.transparent;
 
   /// Color used for shadows in the light Themes.
   static final Color lightShadowColor = Colors.grey.shade900;
+
+  /* Dark Values */
+
+  /// The Text Color in a Dark Theme
+  static const Color darkTextColor = Colors.white;
+
+  /// The Background Color for Screens in a Dark Theme.
+  static final Color darkBackgroundColor = Colors.grey.shade800;
+
+  /// The Color Scheme for Dark Themes.
+  static final ColorScheme darkColorScheme = ColorScheme(
+    brightness: Brightness.dark,
+    primary: _mainColor,
+    onPrimary: darkTextColor,
+    secondary: _secondaryColor,
+    onSecondary: darkTextColor,
+    error: errorColor,
+    onError: darkTextColor,
+    background: darkBackgroundColor,
+    onBackground: darkTextColor,
+    surface: _mainColor,
+    onSurface: _secondaryColor,
+  );
+
+  /// Color used for focused Objects. Used in dark Themes
+  static final Color darkFocusedBorderSideColor = Colors.purple.shade600;
+
+  /// The Border Side Color in dark Themes
+  static final Color darkBorderSideColor = Colors.cyan.shade600;
 }

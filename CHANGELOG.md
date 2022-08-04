@@ -1,3 +1,8 @@
+## 1.0.0
+
+* Light and Dark Theme are implemented.
+
+
 ## 0.2.0
 
 * add ThemeMode Variable

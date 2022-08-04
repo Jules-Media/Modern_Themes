@@ -57,10 +57,10 @@ class Themes {
         primaryColor: Coloring.mainColor,
         colorScheme: Coloring.lightColorScheme,
         focusColor: Coloring.lightFocusedBorderSideColor,
-        dividerColor: Coloring.lightDividerColor,
+        dividerColor: Coloring.dividerColor,
         disabledColor: Coloring.disabledColor,
         scaffoldBackgroundColor: Coloring.lightBackgroundColor,
-        errorColor: Coloring.lightErrorColor,
+        errorColor: Coloring.errorColor,
         shadowColor: Colors.black87,
         primaryColorDark: Coloring.mainColor,
         primaryColorLight: Coloring.mainColor,
@@ -131,18 +131,18 @@ class Themes {
 
         /// Floating Action Button Theme
         floatingActionButtonTheme: FloatingActionButtonThemeData(
-          backgroundColor: Colors.blue.shade800,
+          backgroundColor: Coloring.mainColor,
           elevation: 15,
           disabledElevation: 5,
           enableFeedback: true,
-          focusColor: Colors.blue.shade700,
+          focusColor: Coloring.mainColor.withOpacity(0.4),
           focusElevation: 17,
           foregroundColor: Colors.white,
           hoverElevation: 17,
           shape: RoundedRectangleBorder(
             borderRadius: const BorderRadius.all(Radius.circular(30)),
             side: BorderSide(
-              color: Colors.blue.shade900,
+              color: Coloring.mainColor,
               style: BorderStyle.solid,
               width: 0.25,
             ),
@@ -169,7 +169,7 @@ class Themes {
           ),
           errorBorder: OutlineInputBorder(
             borderRadius: BorderValues.inputBorderRadius,
-            borderSide: BorderValues.lightErrorBorderSide,
+            borderSide: BorderValues.errorBorderSide,
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderValues.inputBorderRadius,
@@ -177,7 +177,7 @@ class Themes {
           ),
           focusedErrorBorder: OutlineInputBorder(
             borderRadius: BorderValues.inputBorderRadius,
-            borderSide: BorderValues.lightErrorBorderSide,
+            borderSide: BorderValues.errorBorderSide,
           ),
           disabledBorder: OutlineInputBorder(
             borderRadius: BorderValues.inputBorderRadius,
@@ -190,7 +190,7 @@ class Themes {
 
         // Divider Theme
         dividerTheme: const DividerThemeData(
-          color: Coloring.lightDividerColor,
+          color: Coloring.dividerColor,
           thickness: NumberValues.dividerThickness,
         ),
 
@@ -253,7 +253,7 @@ class Themes {
           showUnselectedLabels: false,
           type: BottomNavigationBarType.shifting,
           mouseCursor: MaterialStateProperty.resolveWith(
-            ((states) => _lightBottomNavigationBarMouseCursor(states)),
+            ((states) => _bottomNavigationBarMouseCursor(states)),
           ),
         ),
 
@@ -269,9 +269,9 @@ class Themes {
           enableFeedback: true,
           style: ListTileStyle.list,
           dense: false,
-          iconColor: Colors.black,
-          textColor: Colors.black,
-          tileColor: Colors.white,
+          iconColor: Coloring.secondaryColor,
+          textColor: Coloring.secondaryColor,
+          tileColor: Coloring.lightBackgroundColor,
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(
               Radius.circular(50),
@@ -389,7 +389,349 @@ class Themes {
   /// If you wan't a cool Theme, that is different from the
   /// Standard Flutter Theme, but you don't want to
   /// make your own Theme, or you don't know how to, use this Theme.
-  static ThemeData get defaultDarkTheme => ThemeData();
+  static ThemeData get defaultDarkTheme => ThemeData(
+        // General Values
+        useMaterial3: true,
+        brightness: Brightness.dark,
+        materialTapTargetSize: MaterialTapTargetSize.padded,
+        cupertinoOverrideTheme: NoDefaultCupertinoThemeData(
+          brightness: Brightness.dark,
+          scaffoldBackgroundColor: Colors.grey.shade800,
+          primaryColor: Coloring.mainColor,
+        ),
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+
+        // Colors
+        primaryColor: Coloring.mainColor,
+        colorScheme: Coloring.darkColorScheme,
+        focusColor: Coloring.darkFocusedBorderSideColor,
+        dividerColor: Coloring.dividerColor,
+        disabledColor: Coloring.disabledColor,
+        scaffoldBackgroundColor: Coloring.darkBackgroundColor,
+        errorColor: Coloring.errorColor,
+        shadowColor: Colors.black87,
+        primaryColorDark: Coloring.mainColor,
+        primaryColorLight: Coloring.mainColor,
+        backgroundColor: Colors.grey.shade800,
+        dialogBackgroundColor: Colors.grey.shade800,
+        bottomAppBarColor: Coloring.mainColor,
+        indicatorColor: Coloring.mainColor,
+        hintColor: Colors.grey.shade300,
+        cardColor: Coloring.mainColor,
+        hoverColor: Coloring.mainColor,
+        splashColor: Coloring.mainColor,
+        canvasColor: Coloring.mainColor,
+
+        /* Button Themes */
+        buttonTheme: ButtonThemeData(
+          materialTapTargetSize: MaterialTapTargetSize.padded,
+          alignedDropdown: false,
+          buttonColor: Coloring.mainColor,
+          disabledColor: Coloring.disabledColor,
+          colorScheme: Coloring.darkColorScheme,
+          layoutBehavior: ButtonBarLayoutBehavior.padded,
+          textTheme: ButtonTextTheme.normal,
+          focusColor: Coloring.mainColor,
+        ),
+
+        // Text Button Theme
+        textButtonTheme: TextButtonThemeData(
+          style: ButtonStyle(
+            alignment: Alignment.center,
+            enableFeedback: true,
+            side: MaterialStateProperty.all<BorderSide>(
+              BorderValues.lightBorderSide,
+            ),
+            tapTargetSize: MaterialTapTargetSize.padded,
+            visualDensity: VisualDensity.adaptivePlatformDensity,
+          ),
+        ),
+
+        // Toogle Buttons Theme
+        toggleButtonsTheme: const ToggleButtonsThemeData(),
+
+        // Elevated Button Theme
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ButtonStyle(
+            alignment: Alignment.center,
+            enableFeedback: true,
+            shape: MaterialStateProperty.all<OutlinedBorder>(
+              RoundedRectangleBorder(
+                borderRadius: const BorderRadius.all(Radius.circular(20.0)),
+                side: BorderValues.darkBorderSide,
+              ),
+            ),
+            side: MaterialStateProperty.all<BorderSide>(
+              BorderValues.darkBorderSide,
+            ),
+          ),
+        ),
+
+        // Outline Button Theme
+        outlinedButtonTheme: OutlinedButtonThemeData(
+          style: ButtonStyle(
+            alignment: Alignment.center,
+            enableFeedback: true,
+            tapTargetSize: MaterialTapTargetSize.padded,
+            visualDensity: VisualDensity.adaptivePlatformDensity,
+          ),
+        ),
+
+        /// Floating Action Button Theme
+        floatingActionButtonTheme: FloatingActionButtonThemeData(
+          backgroundColor: Coloring.mainColor,
+          elevation: 15,
+          disabledElevation: 5,
+          enableFeedback: true,
+          focusColor: Coloring.mainColor.withOpacity(0.4),
+          focusElevation: 17,
+          foregroundColor: Colors.white,
+          hoverElevation: 17,
+          shape: RoundedRectangleBorder(
+            borderRadius: const BorderRadius.all(Radius.circular(30)),
+            side: BorderSide(
+              color: Coloring.mainColor,
+              style: BorderStyle.solid,
+              width: 0.25,
+            ),
+          ),
+        ),
+        // Input Decoration Theme
+        inputDecorationTheme: InputDecorationTheme(
+          alignLabelWithHint: true,
+          filled: false,
+          floatingLabelAlignment: FloatingLabelAlignment.center,
+          floatingLabelBehavior: FloatingLabelBehavior.auto,
+          labelStyle: TextValues.darkInputLabelStyle,
+          floatingLabelStyle: TextValues.darkInputFloatingLabelStyle,
+          helperMaxLines: 2,
+          isCollapsed: false,
+          isDense: false,
+          border: OutlineInputBorder(
+            borderRadius: BorderValues.inputBorderRadius,
+            borderSide: BorderValues.darkBorderSide,
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderValues.inputBorderRadius,
+            borderSide: BorderValues.darkBorderSide,
+          ),
+          errorBorder: OutlineInputBorder(
+            borderRadius: BorderValues.inputBorderRadius,
+            borderSide: BorderValues.errorBorderSide,
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderValues.inputBorderRadius,
+            borderSide: BorderValues.darkFocusedBoderSide,
+          ),
+          focusedErrorBorder: OutlineInputBorder(
+            borderRadius: BorderValues.inputBorderRadius,
+            borderSide: BorderValues.errorBorderSide,
+          ),
+          disabledBorder: OutlineInputBorder(
+            borderRadius: BorderValues.inputBorderRadius,
+            borderSide: BorderValues.lightDisabledBorderSide,
+          ),
+          errorMaxLines: 10,
+          errorStyle: TextValues.errorStyle,
+          fillColor: Coloring.fillColor,
+        ),
+
+        // Divider Theme
+        dividerTheme: const DividerThemeData(
+          color: Coloring.dividerColor,
+          thickness: NumberValues.dividerThickness,
+        ),
+
+        /* AppBar Themes */
+        appBarTheme: AppBarTheme(
+          centerTitle: true,
+          elevation: 5.0,
+          systemOverlayStyle: SystemUiOverlayStyle(
+            statusBarBrightness: BrightnessValues.statusBarBrightness,
+            statusBarColor: Coloring.mainColor,
+            statusBarIconBrightness: BrightnessValues.statusBarBrightness,
+            systemNavigationBarColor: Colors.transparent,
+            systemNavigationBarIconBrightness:
+                BrightnessValues.statusBarBrightness,
+            systemNavigationBarDividerColor: Colors.red,
+          ),
+          backgroundColor: Coloring.mainColor,
+          iconTheme: IconThemeData(
+            color: Coloring.secondaryColor,
+            opacity: 1.0,
+          ),
+          actionsIconTheme: IconThemeData(
+            opacity: 1.0,
+            color: Coloring.secondaryColor,
+          ),
+          shadowColor: Colors.black87,
+          foregroundColor: Coloring.secondaryColor,
+          shape: RoundedRectangleBorder(
+            borderRadius: const BorderRadius.only(
+              bottomLeft: Radius.circular(33),
+              bottomRight: Radius.circular(33),
+            ),
+            side: BorderSide(
+              color: Coloring.mainColor.withAlpha(50),
+              style: BorderStyle.solid,
+              width: 1.0,
+            ),
+          ),
+        ),
+
+        // Bottom AppBar Themee
+        bottomAppBarTheme: const BottomAppBarTheme(),
+
+        // Bottom Navigation Bar Theme
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          elevation: 10.0,
+          enableFeedback: true,
+          landscapeLayout: BottomNavigationBarLandscapeLayout.linear,
+          selectedIconTheme: const IconThemeData(
+            color: Colors.white,
+            opacity: 1.0,
+          ),
+          unselectedIconTheme: const IconThemeData(
+            color: Colors.white,
+            opacity: 1.0,
+          ),
+          selectedItemColor: Colors.white,
+          unselectedItemColor: Colors.white,
+          showSelectedLabels: true,
+          showUnselectedLabels: false,
+          type: BottomNavigationBarType.shifting,
+          mouseCursor: MaterialStateProperty.resolveWith(
+            ((states) => _bottomNavigationBarMouseCursor(states)),
+          ),
+        ),
+
+        /* Radio Theme */
+        radioTheme: RadioThemeData(
+          fillColor: MaterialStateProperty.all<Color>(Coloring.mainColor),
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+          materialTapTargetSize: MaterialTapTargetSize.padded,
+        ),
+
+        /* List Tile Theme */
+        listTileTheme: ListTileThemeData(
+          enableFeedback: true,
+          style: ListTileStyle.list,
+          dense: false,
+          iconColor: Coloring.secondaryColor,
+          textColor: Coloring.secondaryColor,
+          tileColor: Coloring.darkBackgroundColor,
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(50),
+            ),
+            side: BorderSide(
+              color: Colors.white,
+              style: BorderStyle.solid,
+              width: 0.5,
+            ),
+          ),
+          selectedColor: Colors.black,
+          selectedTileColor: Coloring.mainColor.withAlpha(70),
+          minLeadingWidth: 10,
+          minVerticalPadding: 10,
+        ),
+
+        /* Icon Themes */
+        iconTheme: const IconThemeData(
+          color: Colors.black,
+          opacity: 1.0,
+        ),
+        primaryIconTheme: const IconThemeData(
+          color: Colors.black,
+          opacity: 1.0,
+        ),
+
+        /* Checkbox Theme */
+        checkboxTheme: CheckboxThemeData(
+          checkColor: MaterialStateProperty.all<Color>(Coloring.secondaryColor),
+          fillColor: MaterialStateProperty.all<Color>(Coloring.mainColor),
+          materialTapTargetSize: MaterialTapTargetSize.padded,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(30),
+            ),
+          ),
+          side: BorderSide(
+            color: Coloring.mainColor,
+            style: BorderStyle.solid,
+            width: 0.7,
+          ),
+        ),
+
+        /* Switch Theme Data */
+        switchTheme: const SwitchThemeData(
+          materialTapTargetSize: MaterialTapTargetSize.padded,
+        ),
+
+        /* Bottom Sheet Theme */
+        bottomSheetTheme: BottomSheetThemeData(
+          modalBackgroundColor: Colors.grey.shade800,
+          modalElevation: 10.0,
+          backgroundColor: Colors.grey.shade800,
+          clipBehavior: Clip.antiAliasWithSaveLayer,
+          elevation: 10.0,
+          shape: RoundedRectangleBorder(
+            borderRadius: const BorderRadius.all(
+              Radius.circular(30),
+            ),
+            side: BorderSide(
+              color: Coloring.mainColor,
+              style: BorderStyle.solid,
+              width: 0.2,
+            ),
+          ),
+        ),
+
+        /* Dialog Theme */
+        dialogTheme: DialogTheme(
+          alignment: Alignment.center,
+          backgroundColor: Colors.grey.shade800,
+          elevation: 25.0,
+          shape: RoundedRectangleBorder(
+            borderRadius: const BorderRadius.all(
+              Radius.circular(20),
+            ),
+            side: BorderSide(
+              color: Coloring.mainColor,
+              style: BorderStyle.solid,
+              width: 0.1,
+            ),
+          ),
+        ),
+
+        /* Text Theme */
+        textTheme: TextValues.lightTextTheme,
+
+        /* Progress Indicator Theme */
+        progressIndicatorTheme: ProgressIndicatorThemeData(
+          circularTrackColor: Coloring.darkBackgroundColor,
+          color: Coloring.mainColor,
+          refreshBackgroundColor: Coloring.darkBackgroundColor,
+        ),
+
+        /* Drawer Theme */
+        drawerTheme: DrawerThemeData(
+          backgroundColor: Colors.grey.shade900,
+          elevation: 7.0,
+        ),
+
+        /* Typography */
+        typography: Typography.material2021(),
+
+        /* Scrollbar Theme */
+        scrollbarTheme: ScrollbarThemeData(
+          trackVisibility: MaterialStateProperty.all<bool>(true),
+          interactive: true,
+          thumbVisibility: MaterialStateProperty.all<bool>(false),
+          radius: const Radius.circular(20),
+        ),
+      );
 
   /// The High Contrast Version of the Default Light Theme.
   /// If you wan't a cool Theme, that is different from the
@@ -472,7 +814,7 @@ class Themes {
 
   /// Returns the Mouse Curser for the Bottom Navigation Bar
   /// in the light Mode, depending on the Material State
-  static MouseCursor _lightBottomNavigationBarMouseCursor(
+  static MouseCursor _bottomNavigationBarMouseCursor(
       Set<MaterialState> states) {
     const localStates = <MaterialState>{
       MaterialState.focused,

@@ -19,27 +19,41 @@ class BorderValues {
   static const BorderSide lightBorderSide = BorderSide(
     color: Coloring.lightBorderSideColor,
     style: BorderStyle.solid,
-    width: NumberValues.lightBorderSideWidth,
+    width: NumberValues.borderSideWidth,
   );
 
   /// Border Side used in light Theme for things that show an Error.
-  static final BorderSide lightErrorBorderSide = BorderSide(
-    color: Coloring.lightErrorColor,
+  static final BorderSide errorBorderSide = BorderSide(
+    color: Coloring.errorColor,
     style: BorderStyle.solid,
-    width: NumberValues.lightBorderSideWidth,
+    width: NumberValues.borderSideWidth,
   );
 
   /// Border Side for focused Objects, used in Light Themes.
   static final BorderSide lightFocusedBorderSide = BorderSide(
     color: Coloring.lightFocusedBorderSideColor,
     style: BorderStyle.solid,
-    width: NumberValues.lightBorderSideWidth,
+    width: NumberValues.borderSideWidth,
   );
 
   /// Border Side for disabled Elements. Used in light Themes.
   static final BorderSide lightDisabledBorderSide = BorderSide(
     color: Coloring.disabledColor,
     style: BorderStyle.solid,
-    width: NumberValues.lightBorderSideWidth,
+    width: NumberValues.borderSideWidth,
+  );
+
+  /// Border Side that is used for Buttons and TextFields in the Dark Themes.
+  static final BorderSide darkBorderSide = BorderSide(
+    color: Coloring.darkBorderSideColor,
+    style: BorderStyle.solid,
+    width: NumberValues.borderSideWidth,
+  );
+
+  /// The Border Side for focused Borders in Dark Themes.
+  static final BorderSide darkFocusedBoderSide = BorderSide(
+    color: Coloring.darkFocusedBorderSideColor,
+    style: BorderStyle.solid,
+    width: NumberValues.borderSideWidth,
   );
 }
