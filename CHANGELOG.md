@@ -1,3 +1,8 @@
+## 1.0.1
+
+* Add Change Theme Method.
+
+
 ## 1.0.0
 
 * Light and Dark Theme are implemented.
