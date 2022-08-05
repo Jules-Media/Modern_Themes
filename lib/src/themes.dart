@@ -104,7 +104,7 @@ class Themes {
             alignment: Alignment.center,
             enableFeedback: true,
             side: MaterialStateProperty.all<BorderSide>(
-              BorderValues.lightBorderSide,
+              BorderValues.buttonBorderSide,
             ),
             tapTargetSize: MaterialTapTargetSize.padded,
             visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -120,13 +120,13 @@ class Themes {
             alignment: Alignment.center,
             enableFeedback: true,
             shape: MaterialStateProperty.all<OutlinedBorder>(
-              const RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                side: BorderValues.lightBorderSide,
+              RoundedRectangleBorder(
+                borderRadius: const BorderRadius.all(Radius.circular(20.0)),
+                side: BorderValues.buttonBorderSide,
               ),
             ),
             side: MaterialStateProperty.all<BorderSide>(
-              BorderValues.lightBorderSide,
+              BorderValues.buttonBorderSide,
             ),
           ),
         ),
@@ -281,8 +281,8 @@ class Themes {
           enableFeedback: true,
           style: ListTileStyle.list,
           dense: false,
-          iconColor: Coloring.secondaryColor,
-          textColor: Coloring.secondaryColor,
+          iconColor: Coloring.lightTextColor,
+          textColor: Coloring.lightTextColor,
           tileColor: Coloring.lightBackgroundColor,
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(
@@ -452,7 +452,7 @@ class Themes {
             alignment: Alignment.center,
             enableFeedback: true,
             side: MaterialStateProperty.all<BorderSide>(
-              BorderValues.lightBorderSide,
+              BorderValues.buttonBorderSide,
             ),
             tapTargetSize: MaterialTapTargetSize.padded,
             visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -470,11 +470,11 @@ class Themes {
             shape: MaterialStateProperty.all<OutlinedBorder>(
               RoundedRectangleBorder(
                 borderRadius: const BorderRadius.all(Radius.circular(20.0)),
-                side: BorderValues.darkBorderSide,
+                side: BorderValues.buttonBorderSide,
               ),
             ),
             side: MaterialStateProperty.all<BorderSide>(
-              BorderValues.darkBorderSide,
+              BorderValues.buttonBorderSide,
             ),
           ),
         ),
@@ -629,15 +629,15 @@ class Themes {
           enableFeedback: true,
           style: ListTileStyle.list,
           dense: false,
-          iconColor: Coloring.secondaryColor,
-          textColor: Coloring.secondaryColor,
+          iconColor: Coloring.darkTextColor,
+          textColor: Coloring.darkTextColor,
           tileColor: Coloring.darkBackgroundColor,
-          shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(
+          shape: RoundedRectangleBorder(
+            borderRadius: const BorderRadius.all(
               Radius.circular(50),
             ),
             side: BorderSide(
-              color: Colors.white,
+              color: Coloring.darkBackgroundColor,
               style: BorderStyle.solid,
               width: 0.5,
             ),

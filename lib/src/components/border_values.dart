@@ -15,6 +15,14 @@ class BorderValues {
   );
 
   /* Border Sides */
+
+  //7 The Border Side used for Buttons.
+  static final BorderSide buttonBorderSide = BorderSide(
+    color: Coloring.mainColor,
+    style: BorderStyle.solid,
+    width: NumberValues.borderSideWidth,
+  );
+
   /// Border Side that is used for the Buttons in the Light Theme
   static const BorderSide lightBorderSide = BorderSide(
     color: Coloring.lightBorderSideColor,

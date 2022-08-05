@@ -4,3 +4,4 @@
 library modern_themes;
 
 export 'src/themes.dart';
+export 'src/components/coloring.dart';

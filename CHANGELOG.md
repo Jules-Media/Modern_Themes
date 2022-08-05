@@ -1,3 +1,8 @@
+## 1.0.7
+
+* Fix Stuff with Colors
+
+
 ## 1.0.1
 
 * Add Change Theme Method.
