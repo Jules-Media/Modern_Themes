@@ -1,3 +1,13 @@
+## 1.1.0
+
+* Fix Problem with List Tile Color when pressed.
+
+
+## 1.0.9
+
+* Update List Tile Stuff
+
+
 ## 1.0.8
 
 * Update Stuff  

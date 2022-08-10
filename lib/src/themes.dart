@@ -83,7 +83,6 @@ class Themes {
         hintColor: Colors.grey.shade400,
         cardColor: Coloring.mainColor,
         hoverColor: Coloring.mainColor,
-        splashColor: Coloring.mainColor,
         canvasColor: Coloring.mainColor,
 
         /* Button Themes */
@@ -277,13 +276,13 @@ class Themes {
         ),
 
         /* List Tile Theme */
-        listTileTheme: ListTileThemeData(
+        listTileTheme: const ListTileThemeData(
           enableFeedback: true,
           style: ListTileStyle.list,
           dense: false,
           iconColor: Coloring.lightTextColor,
           textColor: Coloring.lightTextColor,
-          shape: const RoundedRectangleBorder(
+          shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(
               Radius.circular(50),
             ),
@@ -293,7 +292,6 @@ class Themes {
               width: 0.5,
             ),
           ),
-          selectedTileColor: Coloring.mainColor.withAlpha(70),
           minLeadingWidth: 10,
           minVerticalPadding: 10,
         ),
@@ -429,7 +427,6 @@ class Themes {
         hintColor: Colors.grey.shade300,
         cardColor: Coloring.mainColor,
         hoverColor: Coloring.mainColor,
-        splashColor: Coloring.mainColor,
         canvasColor: Coloring.mainColor,
 
         /* Button Themes */
@@ -629,7 +626,6 @@ class Themes {
           dense: false,
           iconColor: Coloring.darkTextColor,
           textColor: Coloring.darkTextColor,
-          tileColor: Coloring.darkBackgroundColor,
           shape: RoundedRectangleBorder(
             borderRadius: const BorderRadius.all(
               Radius.circular(50),
@@ -640,8 +636,6 @@ class Themes {
               width: 0.5,
             ),
           ),
-          selectedColor: Colors.black,
-          selectedTileColor: Coloring.mainColor.withAlpha(70),
           minLeadingWidth: 10,
           minVerticalPadding: 10,
         ),
