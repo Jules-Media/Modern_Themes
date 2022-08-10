@@ -80,10 +80,6 @@ class Themes {
         dialogBackgroundColor: Colors.white,
         bottomAppBarColor: Coloring.mainColor,
         indicatorColor: Coloring.mainColor,
-        hintColor: Colors.grey.shade400,
-        cardColor: Coloring.mainColor,
-        hoverColor: Coloring.mainColor,
-        canvasColor: Coloring.mainColor,
 
         /* Button Themes */
         buttonTheme: ButtonThemeData(
@@ -118,6 +114,8 @@ class Themes {
           style: ButtonStyle(
             alignment: Alignment.center,
             enableFeedback: true,
+            foregroundColor:
+                MaterialStateProperty.all<Color>(Coloring.secondaryColor),
             shape: MaterialStateProperty.all<OutlinedBorder>(
               RoundedRectangleBorder(
                 borderRadius: const BorderRadius.all(Radius.circular(20.0)),
@@ -423,11 +421,6 @@ class Themes {
         backgroundColor: Colors.grey.shade800,
         dialogBackgroundColor: Colors.grey.shade800,
         bottomAppBarColor: Coloring.mainColor,
-        indicatorColor: Coloring.mainColor,
-        hintColor: Colors.grey.shade300,
-        cardColor: Coloring.mainColor,
-        hoverColor: Coloring.mainColor,
-        canvasColor: Coloring.mainColor,
 
         /* Button Themes */
         buttonTheme: ButtonThemeData(
@@ -462,6 +455,8 @@ class Themes {
           style: ButtonStyle(
             alignment: Alignment.center,
             enableFeedback: true,
+            foregroundColor:
+                MaterialStateProperty.all<Color>(Coloring.secondaryColor),
             shape: MaterialStateProperty.all<OutlinedBorder>(
               RoundedRectangleBorder(
                 borderRadius: const BorderRadius.all(Radius.circular(20.0)),
@@ -503,6 +498,7 @@ class Themes {
             ),
           ),
         ),
+
         // Input Decoration Theme
         inputDecorationTheme: InputDecorationTheme(
           alignLabelWithHint: true,
@@ -710,7 +706,7 @@ class Themes {
         ),
 
         /* Text Theme */
-        textTheme: TextValues.lightTextTheme,
+        textTheme: TextValues.darkTextTheme,
 
         /* Progress Indicator Theme */
         progressIndicatorTheme: ProgressIndicatorThemeData(

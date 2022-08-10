@@ -1,3 +1,12 @@
+## 1.1.2
+
+* Update Dark Text Theme
+
+
+## 1.1.1
+
+* Update stuff
+
 ## 1.1.0
 
 * Fix Problem with List Tile Color when pressed.
