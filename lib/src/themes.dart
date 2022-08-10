@@ -283,7 +283,6 @@ class Themes {
           dense: false,
           iconColor: Coloring.lightTextColor,
           textColor: Coloring.lightTextColor,
-          tileColor: Coloring.lightBackgroundColor,
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(
               Radius.circular(50),
@@ -294,7 +293,6 @@ class Themes {
               width: 0.5,
             ),
           ),
-          selectedColor: Colors.black,
           selectedTileColor: Coloring.mainColor.withAlpha(70),
           minLeadingWidth: 10,
           minVerticalPadding: 10,

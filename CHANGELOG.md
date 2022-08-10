@@ -1,3 +1,8 @@
+## 1.0.8
+
+* Update Stuff  
+
+
 ## 1.0.7
 
 * Fix Stuff with Colors
