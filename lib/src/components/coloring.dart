@@ -1,7 +1,7 @@
 library modern_themes;
 
 import 'package:flutter/material.dart'
-    show Color, Colors, ColorScheme, Brightness;
+    show Brightness, Color, Colors, ColorScheme, HSLColor;
 import 'package:helpful_extensions/helpful_extensions.dart' show ColorMapping;
 
 /// Class that contains everything that
@@ -71,10 +71,10 @@ class Coloring {
   );
 
   /// The Color used for Border Sides in the Light Themes.
-  static const Color lightBorderSideColor = Colors.cyan;
+  static final Color lightBorderSideColor = _mainColor;
 
   /// Color used for focused Objects. Used in light Themes
-  static final Color lightFocusedBorderSideColor = Colors.purple.shade400;
+  static final Color lightFocusedBorderSideColor = _mainColor;
 
   /// The Color with which filled Elements will be filled.
   static const Color fillColor = Colors.transparent;
@@ -106,8 +106,8 @@ class Coloring {
   );
 
   /// Color used for focused Objects. Used in dark Themes
-  static final Color darkFocusedBorderSideColor = Colors.purple.shade600;
+  static final Color darkFocusedBorderSideColor = _mainColor;
 
   /// The Border Side Color in dark Themes
-  static final Color darkBorderSideColor = Colors.cyan.shade600;
+  static final Color darkBorderSideColor = _mainColor;
 }

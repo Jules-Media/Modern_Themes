@@ -1,3 +1,7 @@
+## 1.1.3
+
+* Change Border Color to main Color
+
 ## 1.1.2
 
 * Update Dark Text Theme
