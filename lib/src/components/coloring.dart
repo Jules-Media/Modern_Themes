@@ -1,7 +1,7 @@
 library modern_themes;
 
 import 'package:flutter/material.dart'
-    show Brightness, Color, Colors, ColorScheme, HSLColor;
+    show Brightness, Color, Colors, ColorScheme;
 import 'package:helpful_extensions/helpful_extensions.dart' show ColorMapping;
 
 /// Class that contains everything that

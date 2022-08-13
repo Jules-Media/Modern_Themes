@@ -15,7 +15,7 @@ class TextValues {
   );
 
   /// Text Style used for the Label in Input Fields.
-  static const TextStyle lightInputLabelStyle = TextStyle(
+  static final TextStyle lightInputLabelStyle = TextStyle(
     color: Coloring.lightBorderSideColor,
     backgroundColor: Colors.transparent,
     overflow: TextOverflow.fade,

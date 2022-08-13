@@ -168,11 +168,11 @@ class Themes {
           helperMaxLines: 2,
           isCollapsed: false,
           isDense: false,
-          border: const OutlineInputBorder(
+          border: OutlineInputBorder(
             borderRadius: BorderValues.inputBorderRadius,
             borderSide: BorderValues.lightBorderSide,
           ),
-          enabledBorder: const OutlineInputBorder(
+          enabledBorder: OutlineInputBorder(
             borderRadius: BorderValues.inputBorderRadius,
             borderSide: BorderValues.lightBorderSide,
           ),

@@ -1,3 +1,8 @@
+## 1.1.4
+
+* Fix Bugs concering constant expressions
+
+
 ## 1.1.3
 
 * Change Border Color to main Color
