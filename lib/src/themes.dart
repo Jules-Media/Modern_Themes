@@ -68,7 +68,7 @@ class Themes {
         // Colors
         primaryColor: Coloring.mainColor,
         colorScheme: Coloring.lightColorScheme,
-        focusColor: Coloring.lightFocusedBorderSideColor,
+        focusColor: Coloring.focusedBorderSideColor,
         dividerColor: Coloring.dividerColor,
         disabledColor: Coloring.disabledColor,
         scaffoldBackgroundColor: Coloring.lightBackgroundColor,
@@ -410,7 +410,7 @@ class Themes {
         // Colors
         primaryColor: Coloring.mainColor,
         colorScheme: Coloring.darkColorScheme,
-        focusColor: Coloring.darkFocusedBorderSideColor,
+        focusColor: Coloring.focusedBorderSideColor,
         dividerColor: Coloring.dividerColor,
         disabledColor: Coloring.disabledColor,
         scaffoldBackgroundColor: Coloring.darkBackgroundColor,

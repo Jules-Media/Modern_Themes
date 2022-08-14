@@ -1,3 +1,23 @@
+## 1.2.1
+
+* Minor changes in Color Lightness.
+
+
+## 1.2.0
+
+* Release Version with functioning Colors.
+
+
+## 1.1.6
+
+* Fix Bug
+
+
+## 1.1.5
+
+* Change Focus Color
+
+
 ## 1.1.4
 
 * Fix Bugs concering constant expressions
@@ -7,6 +27,7 @@
 
 * Change Border Color to main Color
 
+
 ## 1.1.2
 
 * Update Dark Text Theme
@@ -15,6 +36,7 @@
 ## 1.1.1
 
 * Update stuff
+
 
 ## 1.1.0
 
