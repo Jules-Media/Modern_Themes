@@ -1,3 +1,8 @@
+## 1.2.2
+
+* Few Adjustments
+
+
 ## 1.2.1
 
 * Minor changes in Color Lightness.

@@ -57,7 +57,7 @@ class Coloring {
   /// Color used for focused Objects.
   static Color get focusedBorderSideColor {
     final HSLColor output =
-        _mainColorAsHSL.withLightness(_mainColorAsHSL.lightness + .3);
+        _mainColorAsHSL.withLightness(_mainColorAsHSL.lightness + .25);
     return output.toColor();
   }
 
