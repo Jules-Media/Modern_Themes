@@ -24,8 +24,8 @@ class BorderValues {
   );
 
   /// Border Side that is used for the Buttons in the Light Theme
-  static const BorderSide lightBorderSide = BorderSide(
-    color: Coloring.lightBorderSideColor,
+  static final BorderSide lightBorderSide = BorderSide(
+    color: Coloring.borderSideColor,
     style: BorderStyle.solid,
     width: NumberValues.borderSideWidth,
   );
@@ -39,7 +39,7 @@ class BorderValues {
 
   /// Border Side for focused Objects, used in Light Themes.
   static final BorderSide lightFocusedBorderSide = BorderSide(
-    color: Coloring.lightFocusedBorderSideColor,
+    color: Coloring.focusedBorderSideColor,
     style: BorderStyle.solid,
     width: NumberValues.borderSideWidth,
   );
@@ -53,14 +53,14 @@ class BorderValues {
 
   /// Border Side that is used for Buttons and TextFields in the Dark Themes.
   static final BorderSide darkBorderSide = BorderSide(
-    color: Coloring.darkBorderSideColor,
+    color: Coloring.borderSideColor,
     style: BorderStyle.solid,
     width: NumberValues.borderSideWidth,
   );
 
   /// The Border Side for focused Borders in Dark Themes.
   static final BorderSide darkFocusedBoderSide = BorderSide(
-    color: Coloring.darkFocusedBorderSideColor,
+    color: Coloring.focusedBorderSideColor,
     style: BorderStyle.solid,
     width: NumberValues.borderSideWidth,
   );

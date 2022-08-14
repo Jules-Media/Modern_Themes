@@ -1,7 +1,7 @@
 library modern_themes;
 
 import 'package:flutter/material.dart'
-    show Color, Colors, ColorScheme, Brightness;
+    show Brightness, Color, Colors, ColorScheme, HSLColor;
 import 'package:helpful_extensions/helpful_extensions.dart' show ColorMapping;
 
 /// Class that contains everything that
@@ -25,6 +25,12 @@ class Coloring {
     }
   }
 
+  /// Returns the [_mainColor] as a [HSLColor].
+  /// Used for lighten or darken a Color
+  static HSLColor get _mainColorAsHSL {
+    return HSLColor.fromColor(_mainColor);
+  }
+
   /// Getter for the main Color.
   static Color get mainColor => _mainColor;
 
@@ -44,6 +50,16 @@ class Coloring {
 
   /// Color for the Divider used in all Themes.
   static const Color dividerColor = Colors.grey;
+
+  /// The Color used for Border Sides.
+  static final Color borderSideColor = _mainColor;
+
+  /// Color used for focused Objects.
+  static Color get focusedBorderSideColor {
+    final HSLColor output =
+        _mainColorAsHSL.withLightness(_mainColorAsHSL.lightness + .25);
+    return output.toColor();
+  }
 
   /* Light Values */
 
@@ -69,12 +85,6 @@ class Coloring {
     surface: _mainColor,
     onSurface: _secondaryColor,
   );
-
-  /// The Color used for Border Sides in the Light Themes.
-  static const Color lightBorderSideColor = Colors.cyan;
-
-  /// Color used for focused Objects. Used in light Themes
-  static final Color lightFocusedBorderSideColor = Colors.purple.shade400;
 
   /// The Color with which filled Elements will be filled.
   static const Color fillColor = Colors.transparent;
@@ -104,10 +114,4 @@ class Coloring {
     surface: _mainColor,
     onSurface: _secondaryColor,
   );
-
-  /// Color used for focused Objects. Used in dark Themes
-  static final Color darkFocusedBorderSideColor = Colors.purple.shade600;
-
-  /// The Border Side Color in dark Themes
-  static final Color darkBorderSideColor = Colors.cyan.shade600;
 }

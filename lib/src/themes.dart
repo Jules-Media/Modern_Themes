@@ -68,7 +68,7 @@ class Themes {
         // Colors
         primaryColor: Coloring.mainColor,
         colorScheme: Coloring.lightColorScheme,
-        focusColor: Coloring.lightFocusedBorderSideColor,
+        focusColor: Coloring.focusedBorderSideColor,
         dividerColor: Coloring.dividerColor,
         disabledColor: Coloring.disabledColor,
         scaffoldBackgroundColor: Coloring.lightBackgroundColor,
@@ -168,11 +168,11 @@ class Themes {
           helperMaxLines: 2,
           isCollapsed: false,
           isDense: false,
-          border: const OutlineInputBorder(
+          border: OutlineInputBorder(
             borderRadius: BorderValues.inputBorderRadius,
             borderSide: BorderValues.lightBorderSide,
           ),
-          enabledBorder: const OutlineInputBorder(
+          enabledBorder: OutlineInputBorder(
             borderRadius: BorderValues.inputBorderRadius,
             borderSide: BorderValues.lightBorderSide,
           ),
@@ -410,7 +410,7 @@ class Themes {
         // Colors
         primaryColor: Coloring.mainColor,
         colorScheme: Coloring.darkColorScheme,
-        focusColor: Coloring.darkFocusedBorderSideColor,
+        focusColor: Coloring.focusedBorderSideColor,
         dividerColor: Coloring.dividerColor,
         disabledColor: Coloring.disabledColor,
         scaffoldBackgroundColor: Coloring.darkBackgroundColor,

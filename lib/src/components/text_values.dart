@@ -15,15 +15,15 @@ class TextValues {
   );
 
   /// Text Style used for the Label in Input Fields.
-  static const TextStyle lightInputLabelStyle = TextStyle(
-    color: Coloring.lightBorderSideColor,
+  static final TextStyle lightInputLabelStyle = TextStyle(
+    color: Coloring.borderSideColor,
     backgroundColor: Colors.transparent,
     overflow: TextOverflow.fade,
   );
 
   /// Text Style used for the Label in Input Fields.
   static final TextStyle darkInputLabelStyle = TextStyle(
-    color: Coloring.darkBorderSideColor,
+    color: Coloring.borderSideColor,
     backgroundColor: Colors.transparent,
     overflow: TextOverflow.fade,
   );
@@ -31,7 +31,7 @@ class TextValues {
   /// Text Style used for the Label in Input Fiels.
   /// Only used when the Label is floating above.
   static final TextStyle lightInputFloatingLabelStyle = TextStyle(
-    color: Coloring.lightFocusedBorderSideColor,
+    color: Coloring.focusedBorderSideColor,
     backgroundColor: Colors.transparent,
     overflow: TextOverflow.fade,
   );
@@ -39,7 +39,7 @@ class TextValues {
   /// Text Style used for the Label in Input Fiels.
   /// Only used when the Label is floating above.
   static final TextStyle darkInputFloatingLabelStyle = TextStyle(
-    color: Coloring.darkFocusedBorderSideColor,
+    color: Coloring.focusedBorderSideColor,
     backgroundColor: Colors.transparent,
     overflow: TextOverflow.fade,
   );
