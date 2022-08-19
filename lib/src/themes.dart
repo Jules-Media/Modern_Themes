@@ -1,5 +1,7 @@
 library modern_themes;
 
+import 'package:modern_themes/modern_themes_comps.dart';
+
 import 'components/border_values.dart';
 import 'components/brightness_values.dart';
 import 'components/coloring.dart';
@@ -217,14 +219,8 @@ class Themes {
             systemNavigationBarDividerColor: Colors.red,
           ),
           backgroundColor: Coloring.mainColor,
-          iconTheme: IconThemeData(
-            color: Coloring.secondaryColor,
-            opacity: 1.0,
-          ),
-          actionsIconTheme: IconThemeData(
-            opacity: 1.0,
-            color: Coloring.secondaryColor,
-          ),
+          iconTheme: IconThemes.iconTheme,
+          actionsIconTheme: IconThemes.iconTheme,
           shadowColor: Colors.black87,
           foregroundColor: Coloring.secondaryColor,
           shape: RoundedRectangleBorder(
@@ -248,14 +244,8 @@ class Themes {
           elevation: 10.0,
           enableFeedback: true,
           landscapeLayout: BottomNavigationBarLandscapeLayout.linear,
-          selectedIconTheme: const IconThemeData(
-            color: Colors.white,
-            opacity: 1.0,
-          ),
-          unselectedIconTheme: const IconThemeData(
-            color: Colors.white,
-            opacity: 1.0,
-          ),
+          selectedIconTheme: IconThemes.iconTheme,
+          unselectedIconTheme: IconThemes.iconTheme,
           selectedItemColor: Colors.white,
           unselectedItemColor: Colors.white,
           showSelectedLabels: true,
@@ -559,14 +549,8 @@ class Themes {
             systemNavigationBarDividerColor: Colors.red,
           ),
           backgroundColor: Coloring.mainColor,
-          iconTheme: IconThemeData(
-            color: Coloring.secondaryColor,
-            opacity: 1.0,
-          ),
-          actionsIconTheme: IconThemeData(
-            opacity: 1.0,
-            color: Coloring.secondaryColor,
-          ),
+          iconTheme: IconThemes.iconTheme,
+          actionsIconTheme: IconThemes.iconTheme,
           shadowColor: Colors.black87,
           foregroundColor: Coloring.secondaryColor,
           shape: RoundedRectangleBorder(
@@ -590,14 +574,8 @@ class Themes {
           elevation: 10.0,
           enableFeedback: true,
           landscapeLayout: BottomNavigationBarLandscapeLayout.linear,
-          selectedIconTheme: const IconThemeData(
-            color: Colors.white,
-            opacity: 1.0,
-          ),
-          unselectedIconTheme: const IconThemeData(
-            color: Colors.white,
-            opacity: 1.0,
-          ),
+          selectedIconTheme: IconThemes.iconTheme,
+          unselectedIconTheme: IconThemes.iconTheme,
           selectedItemColor: Colors.white,
           unselectedItemColor: Colors.white,
           showSelectedLabels: true,
@@ -638,11 +616,11 @@ class Themes {
 
         /* Icon Themes */
         iconTheme: const IconThemeData(
-          color: Colors.black,
+          color: Colors.white,
           opacity: 1.0,
         ),
         primaryIconTheme: const IconThemeData(
-          color: Colors.black,
+          color: Colors.white,
           opacity: 1.0,
         ),
 

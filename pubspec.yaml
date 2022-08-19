@@ -1,6 +1,6 @@
 name: modern_themes
 description: A Package to implement, change and use Themes. This Package uses the most modern Material Design to create beautiful Themes
-version: 1.2.2
+version: 1.2.3
 repository: https://github.com/Jules-Media/Modern_Themes
 
 environment:
