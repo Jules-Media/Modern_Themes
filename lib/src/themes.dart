@@ -2,12 +2,6 @@ library modern_themes;
 
 import 'package:modern_themes/modern_themes_comps.dart';
 
-import 'components/border_values.dart';
-import 'components/brightness_values.dart';
-import 'components/coloring.dart';
-import 'components/number_values.dart';
-import 'components/text_values.dart';
-
 import 'package:flutter/cupertino.dart' show NoDefaultCupertinoThemeData;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show SystemUiOverlayStyle;
@@ -285,14 +279,8 @@ class Themes {
         ),
 
         /* Icon Themes */
-        iconTheme: const IconThemeData(
-          color: Colors.black,
-          opacity: 1.0,
-        ),
-        primaryIconTheme: const IconThemeData(
-          color: Colors.black,
-          opacity: 1.0,
-        ),
+        iconTheme: IconThemes.iconTheme,
+        primaryIconTheme: IconThemes.iconTheme,
 
         /* Checkbox Theme */
         checkboxTheme: CheckboxThemeData(
@@ -615,14 +603,8 @@ class Themes {
         ),
 
         /* Icon Themes */
-        iconTheme: const IconThemeData(
-          color: Colors.white,
-          opacity: 1.0,
-        ),
-        primaryIconTheme: const IconThemeData(
-          color: Colors.white,
-          opacity: 1.0,
-        ),
+        iconTheme: IconThemes.iconTheme,
+        primaryIconTheme: IconThemes.iconTheme,
 
         /* Checkbox Theme */
         checkboxTheme: CheckboxThemeData(

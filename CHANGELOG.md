@@ -1,3 +1,8 @@
+## 1.2.4
+
+* Update Icon Theme
+
+
 ## 1.2.3
 
 * Update Icon Theme
