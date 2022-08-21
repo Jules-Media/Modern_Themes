@@ -1,3 +1,13 @@
+## 1.3.2
+
+* Change stuff back
+
+
+## 1.3.1
+
+* Try stuff
+
+
 ## 1.3.0
 
 * Update TextFields Floating Label Color
