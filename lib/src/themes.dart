@@ -92,6 +92,12 @@ class Themes {
         // Text Button Theme
         textButtonTheme: TextButtonThemeData(
           style: ButtonStyle(
+            foregroundColor: MaterialStateProperty.all<Color>(
+              Coloring.secondaryColor,
+            ),
+            backgroundColor: MaterialStateProperty.all<Color>(
+              Coloring.mainColor,
+            ),
             alignment: Alignment.center,
             enableFeedback: true,
             side: MaterialStateProperty.all<BorderSide>(
@@ -108,10 +114,14 @@ class Themes {
         // Elevated Button Theme
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
+            foregroundColor: MaterialStateProperty.all<Color>(
+              Coloring.secondaryColor,
+            ),
+            backgroundColor: MaterialStateProperty.all<Color>(
+              Coloring.mainColor,
+            ),
             alignment: Alignment.center,
             enableFeedback: true,
-            foregroundColor:
-                MaterialStateProperty.all<Color>(Coloring.secondaryColor),
             shape: MaterialStateProperty.all<OutlinedBorder>(
               RoundedRectangleBorder(
                 borderRadius: const BorderRadius.all(Radius.circular(20.0)),
@@ -127,6 +137,12 @@ class Themes {
         // Outline Button Theme
         outlinedButtonTheme: OutlinedButtonThemeData(
           style: ButtonStyle(
+            foregroundColor: MaterialStateProperty.all<Color>(
+              Coloring.secondaryColor,
+            ),
+            backgroundColor: MaterialStateProperty.all<Color>(
+              Coloring.mainColor,
+            ),
             alignment: Alignment.center,
             enableFeedback: true,
             tapTargetSize: MaterialTapTargetSize.padded,
@@ -142,7 +158,7 @@ class Themes {
           enableFeedback: true,
           focusColor: Coloring.mainColor.withOpacity(0.4),
           focusElevation: 17,
-          foregroundColor: Colors.white,
+          foregroundColor: Coloring.secondaryColor,
           hoverElevation: 17,
           shape: RoundedRectangleBorder(
             borderRadius: const BorderRadius.all(Radius.circular(30)),
@@ -240,8 +256,8 @@ class Themes {
           landscapeLayout: BottomNavigationBarLandscapeLayout.linear,
           selectedIconTheme: IconThemes.iconTheme,
           unselectedIconTheme: IconThemes.iconTheme,
-          selectedItemColor: Colors.white,
-          unselectedItemColor: Colors.white,
+          selectedItemColor: Coloring.secondaryColor,
+          unselectedItemColor: Coloring.secondaryColor,
           showSelectedLabels: true,
           showUnselectedLabels: false,
           type: BottomNavigationBarType.shifting,
@@ -415,6 +431,12 @@ class Themes {
         // Text Button Theme
         textButtonTheme: TextButtonThemeData(
           style: ButtonStyle(
+            foregroundColor: MaterialStateProperty.all<Color>(
+              Coloring.secondaryColor,
+            ),
+            backgroundColor: MaterialStateProperty.all<Color>(
+              Coloring.mainColor,
+            ),
             alignment: Alignment.center,
             enableFeedback: true,
             side: MaterialStateProperty.all<BorderSide>(
@@ -432,9 +454,13 @@ class Themes {
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
             alignment: Alignment.center,
+            backgroundColor: MaterialStateProperty.all<Color>(
+              Coloring.mainColor,
+            ),
             enableFeedback: true,
-            foregroundColor:
-                MaterialStateProperty.all<Color>(Coloring.secondaryColor),
+            foregroundColor: MaterialStateProperty.all<Color>(
+              Coloring.secondaryColor,
+            ),
             shape: MaterialStateProperty.all<OutlinedBorder>(
               RoundedRectangleBorder(
                 borderRadius: const BorderRadius.all(Radius.circular(20.0)),
@@ -450,6 +476,10 @@ class Themes {
         // Outline Button Theme
         outlinedButtonTheme: OutlinedButtonThemeData(
           style: ButtonStyle(
+            foregroundColor:
+                MaterialStateProperty.all<Color>(Coloring.secondaryColor),
+            backgroundColor:
+                MaterialStateProperty.all<Color>(Coloring.mainColor),
             alignment: Alignment.center,
             enableFeedback: true,
             tapTargetSize: MaterialTapTargetSize.padded,
@@ -465,7 +495,7 @@ class Themes {
           enableFeedback: true,
           focusColor: Coloring.mainColor.withOpacity(0.4),
           focusElevation: 17,
-          foregroundColor: Colors.white,
+          foregroundColor: Coloring.secondaryColor,
           hoverElevation: 17,
           shape: RoundedRectangleBorder(
             borderRadius: const BorderRadius.all(Radius.circular(30)),
@@ -564,8 +594,8 @@ class Themes {
           landscapeLayout: BottomNavigationBarLandscapeLayout.linear,
           selectedIconTheme: IconThemes.iconTheme,
           unselectedIconTheme: IconThemes.iconTheme,
-          selectedItemColor: Colors.white,
-          unselectedItemColor: Colors.white,
+          selectedItemColor: Coloring.secondaryColor,
+          unselectedItemColor: Coloring.secondaryColor,
           showSelectedLabels: true,
           showUnselectedLabels: false,
           type: BottomNavigationBarType.shifting,

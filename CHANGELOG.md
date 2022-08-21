@@ -1,3 +1,23 @@
+## 1.2.8
+
+* Update Focused Border Colors to match light main Colors
+
+
+## 1.2.7
+
+* Update Button Color
+
+
+## 1.2.6
+
+* Update Theme
+
+
+## 1.2.5
+
+* Update Icon Theme
+
+
 ## 1.2.4
 
 * Update Icon Theme

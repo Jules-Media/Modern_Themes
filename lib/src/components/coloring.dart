@@ -52,12 +52,16 @@ class Coloring {
   static const Color dividerColor = Colors.grey;
 
   /// The Color used for Border Sides.
-  static final Color borderSideColor = _mainColor;
+  static Color get borderSideColor => _mainColor;
 
   /// Color used for focused Objects.
   static Color get focusedBorderSideColor {
-    final HSLColor output =
-        _mainColorAsHSL.withLightness(_mainColorAsHSL.lightness + .25);
+    final HSLColor output;
+    if (_mainColorAsHSL.lightness > .5) {
+      output = _mainColorAsHSL.withLightness(_mainColorAsHSL.lightness - .25);
+    } else {
+      output = _mainColorAsHSL.withLightness(_mainColorAsHSL.lightness + .25);
+    }
     return output.toColor();
   }
 
@@ -72,19 +76,21 @@ class Coloring {
   static const Color lightBackgroundColor = Colors.white;
 
   /// Color Scheme for the light Theme
-  static final ColorScheme lightColorScheme = ColorScheme(
-    brightness: Brightness.light,
-    primary: _mainColor,
-    onPrimary: lightTextColor,
-    secondary: _secondaryColor,
-    onSecondary: lightTextColor,
-    error: errorColor,
-    onError: lightTextColor,
-    background: lightBackgroundColor,
-    onBackground: lightTextColor,
-    surface: _mainColor,
-    onSurface: _secondaryColor,
-  );
+  static ColorScheme get lightColorScheme {
+    return ColorScheme(
+      brightness: Brightness.light,
+      primary: _mainColor,
+      onPrimary: lightTextColor,
+      secondary: _secondaryColor,
+      onSecondary: lightTextColor,
+      error: errorColor,
+      onError: lightTextColor,
+      background: lightBackgroundColor,
+      onBackground: lightTextColor,
+      surface: _mainColor,
+      onSurface: _secondaryColor,
+    );
+  }
 
   /// The Color with which filled Elements will be filled.
   static const Color fillColor = Colors.transparent;
@@ -101,17 +107,19 @@ class Coloring {
   static final Color darkBackgroundColor = Colors.grey.shade800;
 
   /// The Color Scheme for Dark Themes.
-  static final ColorScheme darkColorScheme = ColorScheme(
-    brightness: Brightness.dark,
-    primary: _mainColor,
-    onPrimary: darkTextColor,
-    secondary: _secondaryColor,
-    onSecondary: darkTextColor,
-    error: errorColor,
-    onError: darkTextColor,
-    background: darkBackgroundColor,
-    onBackground: darkTextColor,
-    surface: _mainColor,
-    onSurface: _secondaryColor,
-  );
+  static ColorScheme get darkColorScheme {
+    return ColorScheme(
+      brightness: Brightness.dark,
+      primary: _mainColor,
+      onPrimary: darkTextColor,
+      secondary: _secondaryColor,
+      onSecondary: darkTextColor,
+      error: errorColor,
+      onError: darkTextColor,
+      background: darkBackgroundColor,
+      onBackground: darkTextColor,
+      surface: _mainColor,
+      onSurface: _secondaryColor,
+    );
+  }
 }
