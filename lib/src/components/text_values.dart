@@ -15,34 +15,42 @@ class TextValues {
   );
 
   /// Text Style used for the Label in Input Fields.
-  static final TextStyle lightInputLabelStyle = TextStyle(
-    color: Coloring.borderSideColor,
-    backgroundColor: Colors.transparent,
-    overflow: TextOverflow.fade,
-  );
+  static TextStyle get lightInputLabelStyle {
+    return TextStyle(
+      color: Coloring.borderSideColor,
+      backgroundColor: Colors.transparent,
+      overflow: TextOverflow.fade,
+    );
+  }
 
   /// Text Style used for the Label in Input Fields.
-  static final TextStyle darkInputLabelStyle = TextStyle(
-    color: Coloring.borderSideColor,
-    backgroundColor: Colors.transparent,
-    overflow: TextOverflow.fade,
-  );
+  static TextStyle get darkInputLabelStyle {
+    return TextStyle(
+      color: Coloring.borderSideColor,
+      backgroundColor: Colors.transparent,
+      overflow: TextOverflow.fade,
+    );
+  }
 
   /// Text Style used for the Label in Input Fiels.
   /// Only used when the Label is floating above.
-  static final TextStyle lightInputFloatingLabelStyle = TextStyle(
-    color: Coloring.focusedBorderSideColor,
-    backgroundColor: Colors.transparent,
-    overflow: TextOverflow.fade,
-  );
+  static TextStyle get lightInputFloatingLabelStyle {
+    return TextStyle(
+      color: Coloring.focusedBorderSideColor,
+      backgroundColor: Colors.transparent,
+      overflow: TextOverflow.fade,
+    );
+  }
 
   /// Text Style used for the Label in Input Fiels.
   /// Only used when the Label is floating above.
-  static final TextStyle darkInputFloatingLabelStyle = TextStyle(
-    color: Coloring.focusedBorderSideColor,
-    backgroundColor: Colors.transparent,
-    overflow: TextOverflow.fade,
-  );
+  static TextStyle get darkInputFloatingLabelStyle {
+    return TextStyle(
+      color: Coloring.focusedBorderSideColor,
+      backgroundColor: Colors.transparent,
+      overflow: TextOverflow.fade,
+    );
+  }
 
   /// Text Theme used in light Themes.
   static const TextTheme lightTextTheme = TextTheme(

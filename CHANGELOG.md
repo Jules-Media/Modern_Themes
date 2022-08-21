@@ -1,3 +1,8 @@
+## 1.3.0
+
+* Update TextFields Floating Label Color
+
+
 ## 1.2.8
 
 * Update Focused Border Colors to match light main Colors
