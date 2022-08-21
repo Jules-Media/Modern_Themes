@@ -1,3 +1,9 @@
+## 1.4.0
+
+* Update Depencies
+* Update Methods to Getters
+
+
 ## 1.3.2
 
 * Change stuff back

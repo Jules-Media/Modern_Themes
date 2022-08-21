@@ -18,7 +18,7 @@ class Coloring {
   static void changeColor(Color color) {
     _mainColor = color;
 
-    if (color.isDark()) {
+    if (color.isDark) {
       _secondaryColor = Colors.white;
     } else {
       _secondaryColor = Colors.black;

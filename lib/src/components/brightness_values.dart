@@ -11,7 +11,7 @@ class BrightnessValues {
   /// Returns the Brightness of the Status Bar,
   /// depenfing on the [Coloring.mainColor]
   static Brightness get statusBarBrightness {
-    if (Coloring.mainColor.isLight()) {
+    if (Coloring.mainColor.isLight) {
       return Brightness.dark;
     } else {
       return Brightness.light;
