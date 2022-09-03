@@ -1,3 +1,13 @@
+## 1.4.3
+
+* Update Dependencies
+
+
+## 1.4.2
+
+* Update Icon Themes
+
+
 ## 1.4.1
 
 * Add Example

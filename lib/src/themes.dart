@@ -295,8 +295,8 @@ class Themes {
         ),
 
         /* Icon Themes */
-        iconTheme: IconThemes.iconTheme,
-        primaryIconTheme: IconThemes.iconTheme,
+        iconTheme: IconThemes.lightIconTheme,
+        primaryIconTheme: IconThemes.lightIconTheme,
 
         /* Checkbox Theme */
         checkboxTheme: CheckboxThemeData(
@@ -633,8 +633,8 @@ class Themes {
         ),
 
         /* Icon Themes */
-        iconTheme: IconThemes.iconTheme,
-        primaryIconTheme: IconThemes.iconTheme,
+        iconTheme: IconThemes.darkIconTheme,
+        primaryIconTheme: IconThemes.darkIconTheme,
 
         /* Checkbox Theme */
         checkboxTheme: CheckboxThemeData(
