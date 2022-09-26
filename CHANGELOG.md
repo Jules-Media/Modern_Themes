@@ -1,3 +1,8 @@
+## 1.4.4
+
+* Ad Bottom Navigation Bar Background Color
+
+
 ## 1.4.3
 
 * Update Dependencies
