@@ -80,8 +80,8 @@ class BorderValues {
 
   /// The Input Decoration for light Themes, that uses
   /// [OutlineInputBorder] to display the Text Field.
-  static InputDecorationTheme get lightOutlineInputDecoration {
-    return InputDecorationTheme(
+  static InputDecoration get lightOutlineInputDecoration {
+    return InputDecoration(
       alignLabelWithHint: true,
       filled: false,
       floatingLabelAlignment: FloatingLabelAlignment.center,
@@ -123,8 +123,8 @@ class BorderValues {
 
   /// The Input Decoration for dark Themes, that uses
   /// [OutlineInputBorder] to display the Text Field.
-  static InputDecorationTheme get darkOutlineInputDecoration {
-    return InputDecorationTheme(
+  static InputDecoration get darkOutlineInputDecoration {
+    return InputDecoration(
       alignLabelWithHint: true,
       filled: false,
       floatingLabelAlignment: FloatingLabelAlignment.center,
@@ -166,8 +166,8 @@ class BorderValues {
 
   /// The Input Decoration for light Themes, that uses
   /// [UnderlineInputBorder] to display the Text Field.
-  static InputDecorationTheme get lightUnderlineInputDecoration {
-    return InputDecorationTheme(
+  static InputDecoration get lightUnderlineInputDecoration {
+    return InputDecoration(
       alignLabelWithHint: true,
       filled: false,
       floatingLabelAlignment: FloatingLabelAlignment.center,
@@ -209,8 +209,8 @@ class BorderValues {
 
   /// The Input Decoration for dark Themes, that uses
   /// [UnderlineInputBorder] to display the Text Field.
-  static InputDecorationTheme get darkUnderlineInputDecoration {
-    return InputDecorationTheme(
+  static InputDecoration get darkUnderlineInputDecoration {
+    return InputDecoration(
       alignLabelWithHint: true,
       filled: false,
       floatingLabelAlignment: FloatingLabelAlignment.center,

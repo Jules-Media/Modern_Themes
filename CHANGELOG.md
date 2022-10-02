@@ -1,3 +1,8 @@
+## 1.5.1
+
+* Bugfix
+
+
 ## 1.5.0
 
 * Add Underline Input Decoration to Modern Themes Comps
