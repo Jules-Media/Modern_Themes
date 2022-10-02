@@ -1,3 +1,8 @@
+## 1.5.0
+
+* Add Underline Input Decoration to Modern Themes Comps
+
+
 ## 1.4.4
 
 * Ad Bottom Navigation Bar Background Color

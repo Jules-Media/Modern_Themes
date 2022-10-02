@@ -1,9 +1,10 @@
 library modern_themes;
 
-import 'package:flutter/material.dart'
-    show BorderRadius, Radius, BorderSide, BorderStyle;
 import 'coloring.dart';
 import 'number_values.dart';
+import 'text_values.dart';
+
+import 'package:flutter/material.dart';
 
 /// Class that holds all Values for the Borders.
 class BorderValues {
@@ -72,6 +73,180 @@ class BorderValues {
       color: Coloring.focusedBorderSideColor,
       style: BorderStyle.solid,
       width: NumberValues.borderSideWidth,
+    );
+  }
+
+  /* Input Borders */
+
+  /// The Input Decoration for light Themes, that uses
+  /// [OutlineInputBorder] to display the Text Field.
+  static InputDecorationTheme get lightOutlineInputDecoration {
+    return InputDecorationTheme(
+      alignLabelWithHint: true,
+      filled: false,
+      floatingLabelAlignment: FloatingLabelAlignment.center,
+      floatingLabelBehavior: FloatingLabelBehavior.auto,
+      labelStyle: TextValues.lightInputLabelStyle,
+      floatingLabelStyle: TextValues.lightInputFloatingLabelStyle,
+      helperMaxLines: 2,
+      isCollapsed: false,
+      isDense: false,
+      border: OutlineInputBorder(
+        borderRadius: BorderValues.inputBorderRadius,
+        borderSide: BorderValues.lightBorderSide,
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderValues.inputBorderRadius,
+        borderSide: BorderValues.lightBorderSide,
+      ),
+      errorBorder: OutlineInputBorder(
+        borderRadius: BorderValues.inputBorderRadius,
+        borderSide: BorderValues.errorBorderSide,
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderValues.inputBorderRadius,
+        borderSide: BorderValues.lightFocusedBorderSide,
+      ),
+      focusedErrorBorder: OutlineInputBorder(
+        borderRadius: BorderValues.inputBorderRadius,
+        borderSide: BorderValues.errorBorderSide,
+      ),
+      disabledBorder: OutlineInputBorder(
+        borderRadius: BorderValues.inputBorderRadius,
+        borderSide: BorderValues.lightDisabledBorderSide,
+      ),
+      errorMaxLines: 10,
+      errorStyle: TextValues.errorStyle,
+      fillColor: Coloring.fillColor,
+    );
+  }
+
+  /// The Input Decoration for dark Themes, that uses
+  /// [OutlineInputBorder] to display the Text Field.
+  static InputDecorationTheme get darkOutlineInputDecoration {
+    return InputDecorationTheme(
+      alignLabelWithHint: true,
+      filled: false,
+      floatingLabelAlignment: FloatingLabelAlignment.center,
+      floatingLabelBehavior: FloatingLabelBehavior.auto,
+      labelStyle: TextValues.darkInputLabelStyle,
+      floatingLabelStyle: TextValues.darkInputFloatingLabelStyle,
+      helperMaxLines: 2,
+      isCollapsed: false,
+      isDense: false,
+      border: OutlineInputBorder(
+        borderRadius: BorderValues.inputBorderRadius,
+        borderSide: BorderValues.darkBorderSide,
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderValues.inputBorderRadius,
+        borderSide: BorderValues.darkBorderSide,
+      ),
+      errorBorder: OutlineInputBorder(
+        borderRadius: BorderValues.inputBorderRadius,
+        borderSide: BorderValues.errorBorderSide,
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderValues.inputBorderRadius,
+        borderSide: BorderValues.darkFocusedBoderSide,
+      ),
+      focusedErrorBorder: OutlineInputBorder(
+        borderRadius: BorderValues.inputBorderRadius,
+        borderSide: BorderValues.errorBorderSide,
+      ),
+      disabledBorder: OutlineInputBorder(
+        borderRadius: BorderValues.inputBorderRadius,
+        borderSide: BorderValues.lightDisabledBorderSide,
+      ),
+      errorMaxLines: 10,
+      errorStyle: TextValues.errorStyle,
+      fillColor: Coloring.fillColor,
+    );
+  }
+
+  /// The Input Decoration for light Themes, that uses
+  /// [UnderlineInputBorder] to display the Text Field.
+  static InputDecorationTheme get lightUnderlineInputDecoration {
+    return InputDecorationTheme(
+      alignLabelWithHint: true,
+      filled: false,
+      floatingLabelAlignment: FloatingLabelAlignment.center,
+      floatingLabelBehavior: FloatingLabelBehavior.auto,
+      labelStyle: TextValues.lightInputLabelStyle,
+      floatingLabelStyle: TextValues.lightInputFloatingLabelStyle,
+      helperMaxLines: 2,
+      isCollapsed: false,
+      isDense: false,
+      border: UnderlineInputBorder(
+        borderRadius: BorderValues.inputBorderRadius,
+        borderSide: BorderValues.lightBorderSide,
+      ),
+      enabledBorder: UnderlineInputBorder(
+        borderRadius: BorderValues.inputBorderRadius,
+        borderSide: BorderValues.lightBorderSide,
+      ),
+      errorBorder: UnderlineInputBorder(
+        borderRadius: BorderValues.inputBorderRadius,
+        borderSide: BorderValues.errorBorderSide,
+      ),
+      focusedBorder: UnderlineInputBorder(
+        borderRadius: BorderValues.inputBorderRadius,
+        borderSide: BorderValues.lightFocusedBorderSide,
+      ),
+      focusedErrorBorder: UnderlineInputBorder(
+        borderRadius: BorderValues.inputBorderRadius,
+        borderSide: BorderValues.errorBorderSide,
+      ),
+      disabledBorder: UnderlineInputBorder(
+        borderRadius: BorderValues.inputBorderRadius,
+        borderSide: BorderValues.lightDisabledBorderSide,
+      ),
+      errorMaxLines: 10,
+      errorStyle: TextValues.errorStyle,
+      fillColor: Coloring.fillColor,
+    );
+  }
+
+  /// The Input Decoration for dark Themes, that uses
+  /// [UnderlineInputBorder] to display the Text Field.
+  static InputDecorationTheme get darkUnderlineInputDecoration {
+    return InputDecorationTheme(
+      alignLabelWithHint: true,
+      filled: false,
+      floatingLabelAlignment: FloatingLabelAlignment.center,
+      floatingLabelBehavior: FloatingLabelBehavior.auto,
+      labelStyle: TextValues.darkInputLabelStyle,
+      floatingLabelStyle: TextValues.darkInputFloatingLabelStyle,
+      helperMaxLines: 2,
+      isCollapsed: false,
+      isDense: false,
+      border: UnderlineInputBorder(
+        borderRadius: BorderValues.inputBorderRadius,
+        borderSide: BorderValues.darkBorderSide,
+      ),
+      enabledBorder: UnderlineInputBorder(
+        borderRadius: BorderValues.inputBorderRadius,
+        borderSide: BorderValues.darkBorderSide,
+      ),
+      errorBorder: UnderlineInputBorder(
+        borderRadius: BorderValues.inputBorderRadius,
+        borderSide: BorderValues.errorBorderSide,
+      ),
+      focusedBorder: UnderlineInputBorder(
+        borderRadius: BorderValues.inputBorderRadius,
+        borderSide: BorderValues.darkFocusedBoderSide,
+      ),
+      focusedErrorBorder: UnderlineInputBorder(
+        borderRadius: BorderValues.inputBorderRadius,
+        borderSide: BorderValues.errorBorderSide,
+      ),
+      disabledBorder: UnderlineInputBorder(
+        borderRadius: BorderValues.inputBorderRadius,
+        borderSide: BorderValues.lightDisabledBorderSide,
+      ),
+      errorMaxLines: 10,
+      errorStyle: TextValues.errorStyle,
+      fillColor: Coloring.fillColor,
     );
   }
 }
