@@ -25,6 +25,18 @@ class Coloring {
     }
   }
 
+  /// returns the Contrast Color
+  /// for the Color you put in.
+  /// Currently only supports black
+  /// and white.
+  static contrastColor(Color forColor) {
+    if (forColor == Colors.black) {
+      return Colors.white;
+    } else {
+      return Colors.black;
+    }
+  }
+
   /// Returns the [_mainColor] as a [HSLColor].
   /// Used for lighten or darken a Color
   static HSLColor get _mainColorAsHSL {

@@ -1,3 +1,8 @@
+## 1.5.2
+
+* Add Contrast Color Getter Methdo
+
+
 ## 1.5.1
 
 * Bugfix
