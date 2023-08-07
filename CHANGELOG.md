@@ -1,6 +1,11 @@
+## 1.5.3
+
+* Update Dart and Flutter Versions
+* Remove deprecated parameters
+
 ## 1.5.2
 
-* Add Contrast Color Getter Methdo
+* Add Contrast Color Getter Method
 
 
 ## 1.5.1

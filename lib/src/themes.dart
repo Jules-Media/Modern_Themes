@@ -68,13 +68,10 @@ class Themes {
         dividerColor: Coloring.dividerColor,
         disabledColor: Coloring.disabledColor,
         scaffoldBackgroundColor: Coloring.lightBackgroundColor,
-        errorColor: Coloring.errorColor,
         shadowColor: Colors.black87,
         primaryColorDark: Coloring.mainColor,
         primaryColorLight: Coloring.mainColor,
-        backgroundColor: Colors.white,
         dialogBackgroundColor: Colors.white,
-        bottomAppBarColor: Coloring.mainColor,
         indicatorColor: Coloring.mainColor,
 
         /* Button Themes */
@@ -246,7 +243,7 @@ class Themes {
           ),
         ),
 
-        // Bottom AppBar Themee
+        // Bottom AppBar Theme
         bottomAppBarTheme: const BottomAppBarTheme(),
 
         // Bottom Navigation Bar Theme
@@ -409,13 +406,10 @@ class Themes {
         dividerColor: Coloring.dividerColor,
         disabledColor: Coloring.disabledColor,
         scaffoldBackgroundColor: Coloring.darkBackgroundColor,
-        errorColor: Coloring.errorColor,
         shadowColor: Colors.black87,
         primaryColorDark: Coloring.mainColor,
         primaryColorLight: Coloring.mainColor,
-        backgroundColor: Colors.grey.shade800,
         dialogBackgroundColor: Colors.grey.shade800,
-        bottomAppBarColor: Coloring.mainColor,
 
         /* Button Themes */
         buttonTheme: ButtonThemeData(
