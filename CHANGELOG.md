@@ -1,5 +1,9 @@
 ## 1.5.3
 
+* Update dependency Version (helpful_extensions)
+
+## 1.5.3
+
 * Update Dart and Flutter Versions
 * Remove deprecated parameters
 
