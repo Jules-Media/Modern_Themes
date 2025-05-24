@@ -1,4 +1,12 @@
-## 1.5.3
+## 2.0.0
+
+* Update to support datatype changes in Flutter 3.32
+
+## 1.6.0
+
+* Update to support new Flutter Versions
+
+## 1.5.4
 
 * Update dependency Version (helpful_extensions)
 

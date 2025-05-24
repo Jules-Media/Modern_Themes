@@ -1,23 +1,23 @@
 name: modern_themes
 description: A Package to implement, change and use Themes. This Package uses the most modern Material Design to create beautiful Themes
-version: 1.5.4
+version: 2.0.0
 repository: https://github.com/Jules-Media/Modern_Themes
 
 environment:
-  sdk: ">=3.0.6 <4.0.0"
-  flutter: ">=3.10.6"
+  sdk: ">=3.8.0 <4.0.0"
+  flutter: ">=3.32.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
   # Own Packages
-  helpful_extensions: ^0.5.0
+  helpful_extensions: ^0.5.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.2
+  flutter_lints: ^5.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

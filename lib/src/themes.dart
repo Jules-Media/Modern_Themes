@@ -1,28 +1,27 @@
 library modern_themes;
 
-import 'package:modern_themes/modern_themes_comps.dart';
-
 import 'package:flutter/cupertino.dart' show NoDefaultCupertinoThemeData;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show SystemUiOverlayStyle;
+import 'package:modern_themes/modern_themes_comps.dart';
 
 /// Contains all Themes of the modern_themes Package.
 /// Contains the default Themes and setter for individual Themes.
 class Themes {
   /// The current Theme Mode used in the App.
   /// Possible values are:
-  /// [ThemeMode.system] : addapt to the System Preferences
+  /// [ThemeMode.system] : adapt to the System Preferences
   /// [ThemeMode.light] : Use the light Theme. For example
   /// [lightTheme] or [defaultLightTheme]
   /// [ThemeMode.dark] : Use the dark Theme.
   /// For example [darkTheme] or [defaultDarkTheme]
-  /// The High Contrast Theme is automaticallly used, when you
+  /// The High Contrast Theme is automatically used, when you
   /// have activated the High Contrast Mode in you device
   /// Settings.
   static ThemeMode? _themeMode;
 
   /// Getter for the ThemeMode. iF the ThemeMode is not set,
-  /// [ThemeMode.system] is reaturned as a defualt Value.
+  /// [ThemeMode.system] is returned as a default Value.
   /// Otherwise, the theme Mode the User set with the corresponding
   /// themeMode getter, is returned.
   static ThemeMode get themeMode => _themeMode ?? ThemeMode.system;
@@ -89,15 +88,15 @@ class Themes {
         // Text Button Theme
         textButtonTheme: TextButtonThemeData(
           style: ButtonStyle(
-            foregroundColor: MaterialStateProperty.all<Color>(
+            foregroundColor: WidgetStateProperty.all<Color>(
               Coloring.secondaryColor,
             ),
-            backgroundColor: MaterialStateProperty.all<Color>(
+            backgroundColor: WidgetStateProperty.all<Color>(
               Coloring.mainColor,
             ),
             alignment: Alignment.center,
             enableFeedback: true,
-            side: MaterialStateProperty.all<BorderSide>(
+            side: WidgetStateProperty.all<BorderSide>(
               BorderValues.buttonBorderSide,
             ),
             tapTargetSize: MaterialTapTargetSize.padded,
@@ -105,27 +104,27 @@ class Themes {
           ),
         ),
 
-        // Toogle Buttons Theme
+        // Toggle Buttons Theme
         toggleButtonsTheme: const ToggleButtonsThemeData(),
 
         // Elevated Button Theme
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
-            foregroundColor: MaterialStateProperty.all<Color>(
+            foregroundColor: WidgetStateProperty.all<Color>(
               Coloring.secondaryColor,
             ),
-            backgroundColor: MaterialStateProperty.all<Color>(
+            backgroundColor: WidgetStateProperty.all<Color>(
               Coloring.mainColor,
             ),
             alignment: Alignment.center,
             enableFeedback: true,
-            shape: MaterialStateProperty.all<OutlinedBorder>(
+            shape: WidgetStateProperty.all<OutlinedBorder>(
               RoundedRectangleBorder(
                 borderRadius: const BorderRadius.all(Radius.circular(20.0)),
                 side: BorderValues.buttonBorderSide,
               ),
             ),
-            side: MaterialStateProperty.all<BorderSide>(
+            side: WidgetStateProperty.all<BorderSide>(
               BorderValues.buttonBorderSide,
             ),
           ),
@@ -134,10 +133,10 @@ class Themes {
         // Outline Button Theme
         outlinedButtonTheme: OutlinedButtonThemeData(
           style: ButtonStyle(
-            foregroundColor: MaterialStateProperty.all<Color>(
+            foregroundColor: WidgetStateProperty.all<Color>(
               Coloring.secondaryColor,
             ),
-            backgroundColor: MaterialStateProperty.all<Color>(
+            backgroundColor: WidgetStateProperty.all<Color>(
               Coloring.mainColor,
             ),
             alignment: Alignment.center,
@@ -259,14 +258,14 @@ class Themes {
           showSelectedLabels: true,
           showUnselectedLabels: false,
           type: BottomNavigationBarType.shifting,
-          mouseCursor: MaterialStateProperty.resolveWith(
+          mouseCursor: WidgetStateProperty.resolveWith(
             ((states) => _bottomNavigationBarMouseCursor(states)),
           ),
         ),
 
         /* Radio Theme */
         radioTheme: RadioThemeData(
-          fillColor: MaterialStateProperty.all<Color>(Coloring.mainColor),
+          fillColor: WidgetStateProperty.all<Color>(Coloring.mainColor),
           visualDensity: VisualDensity.adaptivePlatformDensity,
           materialTapTargetSize: MaterialTapTargetSize.padded,
         ),
@@ -298,8 +297,8 @@ class Themes {
 
         /* Checkbox Theme */
         checkboxTheme: CheckboxThemeData(
-          checkColor: MaterialStateProperty.all<Color>(Colors.white),
-          fillColor: MaterialStateProperty.all<Color>(Coloring.mainColor),
+          checkColor: WidgetStateProperty.all<Color>(Colors.white),
+          fillColor: WidgetStateProperty.all<Color>(Coloring.mainColor),
           materialTapTargetSize: MaterialTapTargetSize.padded,
           visualDensity: VisualDensity.adaptivePlatformDensity,
           shape: const RoundedRectangleBorder(
@@ -339,7 +338,7 @@ class Themes {
         ),
 
         /* Dialog Theme */
-        dialogTheme: DialogTheme(
+        dialogTheme: DialogThemeData(
           alignment: Alignment.center,
           backgroundColor: Colors.white,
           elevation: 25.0,
@@ -376,9 +375,9 @@ class Themes {
 
         /* Scrollbar Theme */
         scrollbarTheme: ScrollbarThemeData(
-          trackVisibility: MaterialStateProperty.all<bool>(true),
+          trackVisibility: WidgetStateProperty.all<bool>(true),
           interactive: true,
-          thumbVisibility: MaterialStateProperty.all<bool>(false),
+          thumbVisibility: WidgetStateProperty.all<bool>(false),
           radius: const Radius.circular(20),
         ),
       );
@@ -426,15 +425,15 @@ class Themes {
         // Text Button Theme
         textButtonTheme: TextButtonThemeData(
           style: ButtonStyle(
-            foregroundColor: MaterialStateProperty.all<Color>(
+            foregroundColor: WidgetStateProperty.all<Color>(
               Coloring.secondaryColor,
             ),
-            backgroundColor: MaterialStateProperty.all<Color>(
+            backgroundColor: WidgetStateProperty.all<Color>(
               Coloring.mainColor,
             ),
             alignment: Alignment.center,
             enableFeedback: true,
-            side: MaterialStateProperty.all<BorderSide>(
+            side: WidgetStateProperty.all<BorderSide>(
               BorderValues.buttonBorderSide,
             ),
             tapTargetSize: MaterialTapTargetSize.padded,
@@ -442,27 +441,27 @@ class Themes {
           ),
         ),
 
-        // Toogle Buttons Theme
+        // Toggle Buttons Theme
         toggleButtonsTheme: const ToggleButtonsThemeData(),
 
         // Elevated Button Theme
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
             alignment: Alignment.center,
-            backgroundColor: MaterialStateProperty.all<Color>(
+            backgroundColor: WidgetStateProperty.all<Color>(
               Coloring.mainColor,
             ),
             enableFeedback: true,
-            foregroundColor: MaterialStateProperty.all<Color>(
+            foregroundColor: WidgetStateProperty.all<Color>(
               Coloring.secondaryColor,
             ),
-            shape: MaterialStateProperty.all<OutlinedBorder>(
+            shape: WidgetStateProperty.all<OutlinedBorder>(
               RoundedRectangleBorder(
                 borderRadius: const BorderRadius.all(Radius.circular(20.0)),
                 side: BorderValues.buttonBorderSide,
               ),
             ),
-            side: MaterialStateProperty.all<BorderSide>(
+            side: WidgetStateProperty.all<BorderSide>(
               BorderValues.buttonBorderSide,
             ),
           ),
@@ -472,9 +471,8 @@ class Themes {
         outlinedButtonTheme: OutlinedButtonThemeData(
           style: ButtonStyle(
             foregroundColor:
-                MaterialStateProperty.all<Color>(Coloring.secondaryColor),
-            backgroundColor:
-                MaterialStateProperty.all<Color>(Coloring.mainColor),
+                WidgetStateProperty.all<Color>(Coloring.secondaryColor),
+            backgroundColor: WidgetStateProperty.all<Color>(Coloring.mainColor),
             alignment: Alignment.center,
             enableFeedback: true,
             tapTargetSize: MaterialTapTargetSize.padded,
@@ -579,7 +577,7 @@ class Themes {
           ),
         ),
 
-        // Bottom AppBar Themee
+        // Bottom AppBar Theme
         bottomAppBarTheme: const BottomAppBarTheme(),
 
         // Bottom Navigation Bar Theme
@@ -595,14 +593,14 @@ class Themes {
           showSelectedLabels: true,
           showUnselectedLabels: false,
           type: BottomNavigationBarType.shifting,
-          mouseCursor: MaterialStateProperty.resolveWith(
+          mouseCursor: WidgetStateProperty.resolveWith(
             ((states) => _bottomNavigationBarMouseCursor(states)),
           ),
         ),
 
         /* Radio Theme */
         radioTheme: RadioThemeData(
-          fillColor: MaterialStateProperty.all<Color>(Coloring.mainColor),
+          fillColor: WidgetStateProperty.all<Color>(Coloring.mainColor),
           visualDensity: VisualDensity.adaptivePlatformDensity,
           materialTapTargetSize: MaterialTapTargetSize.padded,
         ),
@@ -634,8 +632,8 @@ class Themes {
 
         /* Checkbox Theme */
         checkboxTheme: CheckboxThemeData(
-          checkColor: MaterialStateProperty.all<Color>(Coloring.secondaryColor),
-          fillColor: MaterialStateProperty.all<Color>(Coloring.mainColor),
+          checkColor: WidgetStateProperty.all<Color>(Coloring.secondaryColor),
+          fillColor: WidgetStateProperty.all<Color>(Coloring.mainColor),
           materialTapTargetSize: MaterialTapTargetSize.padded,
           visualDensity: VisualDensity.adaptivePlatformDensity,
           shape: const RoundedRectangleBorder(
@@ -675,7 +673,7 @@ class Themes {
         ),
 
         /* Dialog Theme */
-        dialogTheme: DialogTheme(
+        dialogTheme: DialogThemeData(
           alignment: Alignment.center,
           backgroundColor: Colors.grey.shade800,
           elevation: 25.0,
@@ -712,9 +710,9 @@ class Themes {
 
         /* Scrollbar Theme */
         scrollbarTheme: ScrollbarThemeData(
-          trackVisibility: MaterialStateProperty.all<bool>(true),
+          trackVisibility: WidgetStateProperty.all<bool>(true),
           interactive: true,
-          thumbVisibility: MaterialStateProperty.all<bool>(false),
+          thumbVisibility: WidgetStateProperty.all<bool>(false),
           radius: const Radius.circular(20),
         ),
       );
@@ -761,20 +759,20 @@ class Themes {
 
   /// Light Theme. The most used Theme.
   /// If you set the light Theme with the Setter, your individual
-  /// light Theme will be returned. If you havn't set a light Theme,
+  /// light Theme will be returned. If you haven't set a light Theme,
   /// de [defaultLightTheme] will be returned
   static ThemeData get lightTheme => _lightTheme ?? defaultLightTheme;
 
   /// Dark Theme. The coolest Theme (if you're Batman).
   /// If you set the dark Theme with the Setter, your individual
-  /// dark Theme will be returned. If you havn't set a dark Theme,
+  /// dark Theme will be returned. If you haven't set a dark Theme,
   /// de [defaultDarkTheme] will be returned
   static ThemeData get darkTheme => _darkTheme ?? defaultDarkTheme;
 
   /// The high contrast Version of the [lightTheme]
   /// If you set the high Contrast light Theme with the Setter, your individual
   /// high Contrast Version of the light Theme will be returned.
-  /// If you havn't set a this Version of the light Theme,
+  /// If you haven't set a this Version of the light Theme,
   /// de [defaultHighContrastLightTheme] will be returned
   static ThemeData get highContrastLightTheme =>
       _highContrastLightTheme ?? defaultHighContrastLightTheme;
@@ -782,19 +780,18 @@ class Themes {
   /// The high contrast Version of the [darkTheme]
   /// If you set the high Contrast dark Theme with the Setter, your individual
   /// high Contrast Version of the dark Theme will be returned.
-  /// If you havn't set a this Version of the dark Theme,
+  /// If you haven't set a this Version of the dark Theme,
   /// de [defaultHighContrastDarkTheme] will be returned
   static ThemeData get highContrastDarkTheme =>
       _highContrastDarkTheme ?? defaultHighContrastDarkTheme;
 
-  /// Returns the Mouse Curser for the Bottom Navigation Bar
+  /// Returns the Mouse Cursor for the Bottom Navigation Bar
   /// in the light Mode, depending on the Material State
-  static MouseCursor _bottomNavigationBarMouseCursor(
-      Set<MaterialState> states) {
-    const localStates = <MaterialState>{
-      MaterialState.focused,
-      MaterialState.hovered,
-      MaterialState.pressed,
+  static MouseCursor _bottomNavigationBarMouseCursor(Set<WidgetState> states) {
+    const localStates = <WidgetState>{
+      WidgetState.focused,
+      WidgetState.hovered,
+      WidgetState.pressed,
     };
     if (states.any(localStates.contains)) {
       return SystemMouseCursors.click;

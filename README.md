@@ -19,12 +19,12 @@ Pub.dev: https://pub.dev/packages/modern_themes
 
 # About
 
-With this Plugin you can implement and use Themes very easy.
+With this Plugin, you can implement and use Themes very easily.
 This Plugin comes with a few modern and beautiful Themes you can use without much effort. Or you can set your own Theme and take advantage of the functions and Theme Components built in this package.
 
 
 # How to
-Just use this Themes in your Material or Cupertino App.
+Use this Themes in your Material or Cupertino App.
 
 
 ## Additional information
