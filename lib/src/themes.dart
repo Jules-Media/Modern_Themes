@@ -1,4 +1,4 @@
-library modern_themes;
+library;
 
 import 'package:flutter/cupertino.dart' show NoDefaultCupertinoThemeData;
 import 'package:flutter/material.dart';
@@ -243,7 +243,7 @@ class Themes {
         ),
 
         // Bottom AppBar Theme
-        bottomAppBarTheme: const BottomAppBarTheme(),
+        bottomAppBarTheme: const BottomAppBarThemeData(),
 
         // Bottom Navigation Bar Theme
         bottomNavigationBarTheme: BottomNavigationBarThemeData(
@@ -578,7 +578,7 @@ class Themes {
         ),
 
         // Bottom AppBar Theme
-        bottomAppBarTheme: const BottomAppBarTheme(),
+        bottomAppBarTheme: const BottomAppBarThemeData(),
 
         // Bottom Navigation Bar Theme
         bottomNavigationBarTheme: BottomNavigationBarThemeData(

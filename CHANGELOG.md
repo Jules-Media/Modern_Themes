@@ -1,3 +1,7 @@
+## 2.0.1
+
+* Update to support datatype changes in Flutter 3.32
+
 ## 2.0.0
 
 * Update to support datatype changes in Flutter 3.32
